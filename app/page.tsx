@@ -250,7 +250,7 @@ export default function Home() {
 
           {/* ANYONE CAN LEARN */}
           <section style={{ padding: '48px 0' }}>
-            <h2 className="bonsai-center" style={{ marginBottom: 64 }}>Anyone can learn how to do this.</h2>
+            <h2 className="bonsai-center" style={{ marginBottom: 64 }}>Anyone can learn Bonsai.</h2>
             <div style={{ maxWidth: 640, margin: '0 auto' }}>
               <p><strong>&rarr; Even if you&apos;ve never touched a bonsai before.</strong> There&apos;s a simple step-by-step method that works on any tree, any species, any skill level. No natural talent needed.</p>
               <p><strong>&rarr; Even if you think bonsai is too hard.</strong> A finished bonsai is the most impressive thing you can have on your desk. That&apos;s exactly why people will stare at yours.</p>
