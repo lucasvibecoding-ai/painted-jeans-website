@@ -248,6 +248,19 @@ export default function Home() {
 
           <div className="bonsai-divider" />
 
+          {/* ANYONE CAN LEARN */}
+          <section style={{ padding: '48px 0' }}>
+            <h2 className="bonsai-center" style={{ marginBottom: 64 }}>Anyone can learn how to do this.</h2>
+            <div style={{ maxWidth: 640, margin: '0 auto' }}>
+              <p><strong>&rarr; Even if you&apos;ve never touched a bonsai before.</strong> There&apos;s a simple step-by-step method that works on any tree, any species, any skill level. No natural talent needed.</p>
+              <p><strong>&rarr; Even if you think bonsai is too hard.</strong> A finished bonsai is the most impressive thing you can have on your desk. That&apos;s exactly why people will stare at yours.</p>
+              <p><strong>&rarr; Even if you don&apos;t know which tree to pick.</strong> You&apos;ll learn exactly which species fits your space, your light, and your lifestyle. One module and you&apos;ll know more than 90% of beginners.</p>
+              <p><strong>&rarr; Even if you don&apos;t think of yourself as &quot;creative.&quot;</strong> You need a tree, a pair of shears, and 20 minutes. That&apos;s it.</p>
+            </div>
+          </section>
+
+          <div className="bonsai-divider" />
+
           {/* PHILOSOPHY */}
           <section style={{ padding: '48px 0' }}>
             <h2 className="bonsai-center" style={{ marginBottom: 8, fontSize: 'clamp(2rem, 4.5vw, 3rem)' }}>The Philosophy Behind the Practice</h2>
@@ -329,14 +342,6 @@ export default function Home() {
           </div></div>{/* close container and bonsai-page */}
           <section className="bonsai-page" style={{ background: '#f2efe8', padding: '80px 0 64px' }}>
             <div style={{ maxWidth: 1080, margin: '0 auto', padding: '0 40px' }}>
-            <div style={{ marginBottom: 64 }}>
-              <h2 style={{ marginBottom: 44, textAlign: 'center' }}>&quot;It takes years to see results. I&apos;m too impatient.&quot;</h2>
-              <p>Your FIRST pruning session transforms a bushy plant into something that&apos;s clearly a bonsai.</p>
-              <p>That happens in <strong>one afternoon</strong>. Not one decade.</p>
-              <p>The <strong>&quot;holy shit, I made that&quot;</strong> moment? That&apos;s day one.</p>
-              <p><strong>Every week, your tree shows you something new.</strong></p>
-            </div>
-
             <div>
               <h2 style={{ marginBottom: 44, textAlign: 'center' }}>&quot;Isn&apos;t this an expensive hobby?&quot;</h2>
               <p><strong>Your first bonsai costs less than lunch.</strong></p>

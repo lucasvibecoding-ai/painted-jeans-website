@@ -28,6 +28,10 @@ const faqs = [
     a: 'Your first pruning session creates a dramatic transformation, often within the first weekend. Going from "overgrown nursery plant" to "that\'s clearly a bonsai" can happen in one afternoon with the right cuts. Deeper refinement builds over months and years, but the initial "wow" moment is immediate.',
   },
   {
+    q: "It takes years to see results. I'm too impatient.",
+    a: "Your FIRST pruning session transforms a bushy plant into something that's clearly a bonsai. That happens in one afternoon, not one decade. The \"holy shit, I made that\" moment? That's day one. Every week after, your tree shows you something new.",
+  },
+  {
     q: 'What if my tree dies?',
     a: "The Troubleshooting Guide covers every warning sign so you can intervene before it's too late. But honestly, even masters lose trees. It's part of learning. That's exactly why we start you with affordable nursery stock ($12-15). A dead $12 tree is a lesson, not a disaster. And the next one will be better because of what you learned.",
   },
