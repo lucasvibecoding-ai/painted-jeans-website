@@ -186,6 +186,7 @@ export default function Home() {
           #hero { width: 100% !important; margin-top: 16px; }
           .now-only { font-size: 32px !important; }
           .cta-btn { font-size: 1.5rem !important; }
+          .faq-q-text { font-weight: 500 !important; }
         }
       `}} />
 
