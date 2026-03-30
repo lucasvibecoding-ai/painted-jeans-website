@@ -183,6 +183,7 @@ export default function Home() {
           .module-img, .bonus-img { height: 160px; }
           .badge { font-size: 10px; letter-spacing: 1.5px; padding: 5px 12px; }
           .payment-method-btn { font-size: 13px; padding: 10px 12px; }
+          #hero { width: 100% !important; }
         }
       `}} />
 
