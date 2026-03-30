@@ -47,7 +47,7 @@ export default function CountdownBar() {
           <span className="sm:hidden text-xs" style={{ color: '#b44', fontWeight: 600 }}>{purchased ? '2' : '3'} Spots Left</span>
         </div>
         <button
-          onClick={() => router.push('/checkout')}
+          onClick={() => document.getElementById('get-access')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
           type="button"
           className="text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer hover:brightness-110 hover:scale-105"
           style={{ background: 'linear-gradient(135deg, #3a6347, #264432)' }}
