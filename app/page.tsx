@@ -550,14 +550,6 @@ export default function Home() {
             <p className="ps-note">P.S. If the next page doesn&apos;t load... I&apos;m sorry, but the deal has ended!</p>
           </div>
 
-          <div className="bonsai-divider" />
-
-          {/* CLOSING */}
-          <section className="closing">
-            <div className="sm-divider" style={{ marginBottom: 20 }} />
-            <p className="closing-quote">&quot;You opened your closet looking for something to wear. You might close it knowing you can make anything you want.&quot;</p>
-            <p style={{ color: 'var(--ink-muted)', marginBottom: 0 }}>&mdash; Katie</p>
-          </section>
 
         </div>
       </div>
