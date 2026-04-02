@@ -5,9 +5,9 @@ import CountdownBar from "./CountdownBar";
 import FaqAccordion from "./FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Bonsai: Learn the Ancient Art of Sculpting Trees & Calming Your Mind",
+  title: "Painted Jeans: Turn Any Old Jeans Into Custom Wearable Art — In a Weekend",
   description:
-    "Bonsai is more than just a tree. It's a 1,500-year-old Japanese art of releasing stress, easing anxiety, and letting go of overthinking.",
+    "Learn how to turn any old pair of jeans into custom painted jeans you'll actually wear. No art experience needed. Step-by-step video course.",
 };
 
 export default function Home() {
@@ -23,10 +23,10 @@ export default function Home() {
           --ink: #1e1a14;
           --ink-soft: rgb(43, 43, 43);
           --ink-muted: #7d7568;
-          --green: #3a6347;
-          --green-deep: #264432;
-          --green-soft: #5a8f6c;
-          --green-pale: rgba(58,99,71,0.06);
+          --green: #6347a0;
+          --green-deep: #442c6e;
+          --green-soft: #8f6cb5;
+          --green-pale: rgba(99,71,160,0.06);
           --gold: #b08d3a;
           --gold-light: #d4b35c;
           --gold-pale: rgba(176,141,58,0.08);
@@ -65,7 +65,8 @@ export default function Home() {
         .hero-img { width: 100%; max-width: 860px; margin: 0 auto; border-radius: 12px; overflow: hidden; aspect-ratio: 16/9; background: var(--bg-warm); border: 1px solid var(--sand); display: flex; align-items: center; justify-content: center; }
         .hero-img-ph { text-align: center; padding: 36px; color: var(--ink-muted); font-size: 14px; line-height: 1.5; }
         .hero-img-ph .em { font-size: 48px; display: block; margin-bottom: 8px; }
-        .hero h1 .accent { color: var(--green-deep); font-style: italic; }
+        .hero h1 .accent { background: linear-gradient(135deg, var(--green), var(--green-deep)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-style: italic; }
+        .hero-intro { font-size: clamp(0.75rem, 1.5vw, 0.85rem); color: var(--ink-muted); margin-bottom: 20px; font-style: normal; letter-spacing: 3px; font-weight: 700; text-transform: uppercase; background: transparent; display: inline-block; padding: 10px 24px; border-radius: 50px; border: 1px solid var(--sand); }
 
         /* Philosophy blocks */
         .phil-block { margin-bottom: 32px; padding: 28px 32px; background: var(--card); border-radius: 12px; border: 1px solid var(--sand); }
@@ -89,15 +90,15 @@ export default function Home() {
         /* Objections */
         .objection { padding: 56px 0; }
 
-        /* Module cards */
-        .module-card { background: var(--card); border-radius: 12px; padding: 28px; margin-bottom: 20px; border: 1px solid var(--sand); }
+        /* Module cards — 2-col grid */
+        .modules-grid { display: flex; flex-direction: column; gap: 16px; }
+        .module-card { background: var(--card); border-radius: 12px; padding: 28px; border: 1px solid var(--sand); margin-bottom: 0; }
         .module-label { font-size: 12px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: var(--green); margin-bottom: 6px; }
-        .module-sub { font-size: 18px; color: var(--ink-muted); margin-bottom: 16px; }
+        .module-sub { font-size: 16px; color: var(--ink-muted); margin-bottom: 14px; }
         .module-body { display: flex; gap: 28px; align-items: flex-start; }
         .module-card ul { list-style: none; padding: 0; flex: 1; }
-        .module-card li { padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.04); font-size: 15px; line-height: 1.6; }
-        .module-card li:last-child { border: none; }
-        .module-img { width: 300px; min-width: 300px; height: 280px; border-radius: 8px; background: linear-gradient(135deg, var(--bg-warm), var(--sand)); display: flex; align-items: center; justify-content: center; font-size: 28px; border: 1px solid var(--sand); overflow: hidden; position: relative; }
+        .module-card li { padding: 6px 0; font-size: 15px; line-height: 1.6; }
+        .module-img { width: 280px; min-width: 280px; height: 260px; border-radius: 8px; background: linear-gradient(135deg, var(--bg-warm), var(--sand)); display: flex; align-items: center; justify-content: center; font-size: 28px; border: 1px solid var(--sand); overflow: hidden; position: relative; }
 
         /* CTA */
         .cta-block { text-align: center; padding: 56px 0; }
@@ -121,7 +122,7 @@ export default function Home() {
         .bonus-card ul { flex: 1; }
         .bonus-header { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
         .bonus-label { font-size: 12px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); }
-        .bonus-value { font-size: 12px; color: var(--green); font-weight: 700; background: rgba(58,99,71,0.1); padding: 2px 10px; border-radius: 100px; letter-spacing: 0.5px; }
+        .bonus-value { font-size: 12px; color: var(--green); font-weight: 700; background: rgba(99,71,160,0.1); padding: 2px 10px; border-radius: 100px; letter-spacing: 0.5px; }
         .bonus-card h3 { font-size: 1.3rem; color: var(--ink); margin-bottom: 4px; }
         .bonus-desc { font-size: 18px; color: var(--ink-muted); margin-bottom: 14px; }
         .bonus-card ul { list-style: none; padding: 0; }
@@ -135,9 +136,10 @@ export default function Home() {
         .stack-total { font-weight: 700; border-bottom: 2px solid var(--green); padding-bottom: 10px; margin-bottom: 6px; }
         .stack-total .label { color: var(--ink); }
 
-        /* FAQ */
-        .faq-item { border-bottom: 1px solid rgba(0,0,0,0.06); }
-        .faq-q { width: 100%; display: flex; align-items: center; gap: 14px; padding: 18px 0; background: none; border: none; cursor: pointer; text-align: left; font-family: 'Lora', serif; font-size: 20px; }
+        /* FAQ — individual cards */
+        .faq-list { display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: var(--cream); border-radius: 12px; padding: 4px 20px; border: 1px solid var(--sand); }
+        .faq-q { width: 100%; display: flex; align-items: center; gap: 14px; padding: 18px 0; background: none; border: none; cursor: pointer; text-align: left; font-family: 'Lora', serif; font-size: 18px; }
         .faq-badge { width: 28px; height: 28px; border-radius: 50%; background: var(--green-pale); color: var(--green); font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
         .faq-q-text { flex: 1; font-weight: 700; color: var(--ink); }
         .faq-icon { color: var(--green); font-size: 20px; transition: transform 0.2s; flex-shrink: 0; }
@@ -152,7 +154,9 @@ export default function Home() {
         .closing-quote { font-size: clamp(1.3rem, 2.5vw, 1.8rem); color: var(--ink); font-style: italic; max-width: 520px; margin: 0 auto 28px; line-height: 1.5; }
 
         /* Footer */
-        .bonsai-footer { padding: 36px 0; text-align: center; font-size: 14px; color: var(--ink-muted); border-top: 1px solid var(--sand); }
+        .bonsai-footer { padding: 44px 0; text-align: center; font-size: 14px; color: #c4b9a8; background: #1e1a14; margin-top: 48px; }
+        .bonsai-footer a { color: #d4b35c; }
+        .bonsai-footer p { color: #c4b9a8; }
 
         /* Split layout */
         .split { display: flex; gap: 40px; align-items: center; padding: 56px 0; }
@@ -164,14 +168,17 @@ export default function Home() {
 
         @media (max-width: 768px) {
           .bonsai-page .container { padding: 0 20px; }
+          .bonsai-page section { padding-left: 20px; padding-right: 20px; }
           .split { flex-direction: column; gap: 24px; }
           .split-img { flex: none; width: 100%; height: auto; }
           .split-text { flex: 1 !important; }
-          .module-body, .bonus-body { flex-direction: column; }
-          .module-img, .bonus-img { width: 100%; min-width: unset; height: 200px; }
+          .module-body { flex-direction: column; }
+          .module-img { width: 100%; min-width: unset; height: 200px; }
+          .bonus-body { flex-direction: column; }
+          .bonus-img { width: 100%; min-width: unset; height: 200px; }
           .module-card, .bonus-card { padding: 20px; }
           .instructor { flex-direction: column; text-align: center; align-items: center; }
-          .instructor-img { width: 140px; height: 175px; }
+          .instructor-img { width: 100% !important; max-width: 400px !important; height: auto !important; }
           .phil-block { padding: 20px; }
           .stack-row { max-width: 100%; }
           .closing-quote { font-size: 1.2rem; }
@@ -190,6 +197,8 @@ export default function Home() {
           .faq-q { font-size: 16px !important; }
           .stack-row { padding: 6px 0 !important; font-size: 15px; }
           .stack-row .val { font-size: 15px !important; }
+          .checkout-box { padding: 24px 20px !important; }
+          .hero-intro { font-size: 0.7rem !important; letter-spacing: 2px !important; padding: 8px 16px !important; }
         }
       `}} />
 
@@ -197,164 +206,80 @@ export default function Home() {
         <div className="container">
 
           {/* HERO */}
-          <section style={{ paddingTop: 64, paddingBottom: 48, textAlign: 'center' }}>
-            <div className="badge">No prior experience required</div>
-            <h1>Bonsai: Learn the Ancient Art of <span className="accent">Sculpting Trees &amp; Calming Your Mind</span></h1>
+          <section style={{ paddingTop: 72, paddingBottom: 48, textAlign: 'center' }}>
+            <p className="hero-intro">Even if you&apos;ve never painted before</p>
+            <h1>Turn Any Old Jeans Into <span className="accent">Custom Painted Jeans</span> In a Weekend</h1>
+            <p style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: 'var(--ink-muted)', marginTop: 8, maxWidth: 600, marginLeft: 'auto', marginRight: 'auto', fontStyle: 'italic' }}>Without needing years of practice or expensive supplies</p>
 
-            <div className="split" style={{ paddingTop: 28, paddingBottom: 0 }}>
-              <div className="split-text" style={{ textAlign: 'left', flex: '1.5' }}>
-                <p style={{ marginBottom: 0, textAlign: 'left' }}>
-                  Bonsai is more than just a tree.
-                  <br /><br />
-                  It&apos;s a 1,500-year-old Japanese practice of releasing stress, easing anxiety, and letting go of overthinking.
-                </p>
-              </div>
-              <div style={{ flex: '1 1 50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Image id="hero" src="/hero2.jpg" alt="Beautiful bonsai tree" width={600} height={600} style={{ width: '75%', height: 'auto', borderRadius: 16, boxShadow: '0 8px 30px rgba(0,0,0,0.12)' }} />
-              </div>
+            <div style={{ marginTop: 36, display: 'flex', justifyContent: 'center' }}>
+              <Image id="hero" src="/hero2.webp" alt="Custom painted jeans" width={1024} height={1024} style={{ width: '100%', maxWidth: 560, height: 'auto', borderRadius: 16, boxShadow: '0 12px 40px rgba(0,0,0,0.15)' }} />
             </div>
           </section>
 
           <div className="bonsai-divider" />
 
-          {/* SPLIT: CONTROL */}
-          <section className="split">
-            <div className="split-text">
-              <h2 style={{ textAlign: 'center', marginBottom: 64 }}>The Japanese secret to shutting off your brain.</h2>
-              <p>You meditate.</p>
-              <p>You journal.</p>
-              <p>You try breathing exercises.</p>
-              <p>But your brain doesn&apos;t seem to stop.</p>
-              <p>For 1,500 years, the Japanese have used a different approach.</p>
-              <p>Not emptying the mind. <strong>Filling it with a living thing that requires your calm.</strong></p>
-              <p>When you&apos;re shaping a tree, there&apos;s no room left for the noise.</p>
-              <p>The anxiety stops.</p>
-              <p style={{ marginBottom: 80 }}>Not because you forced it out. Because <strong>something better took its place.</strong></p>
-
+          {/* THE PROBLEM */}
+          <section style={{ padding: '56px 0' }}>
+            <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'left' }}>
+              <h2 style={{ textAlign: 'center', marginBottom: 64 }}>Clothes that actually feel like YOU.</h2>
+              <p>You see incredible hand-painted jeans online and think: &quot;I could never make that.&quot;</p>
+              <p>So you buy the same mass-produced stuff everyone else wears.</p>
+              <p>But deep down, you want something you made with your own hands.</p>
+              <p>Something that makes people ask: <strong>&quot;Wait... where did you get those?&quot;</strong></p>
+              <p style={{ marginBottom: 80 }}>And you get to say: <strong>&quot;I painted them myself.&quot;</strong></p>
             </div>
           </section>
 
-
-          {/* BUT HERE'S WHAT REALLY KEEPS YOU UP */}
+          {/* BUT HERE'S WHAT REALLY HOLDS YOU BACK */}
           <section style={{ padding: '0 0 56px' }}>
-            <h2 className="bonsai-center" style={{ marginBottom: 64 }}>But here&apos;s what really keeps you up at night.</h2>
-            <div className="split" style={{ paddingTop: 0, paddingBottom: 0, gap: 64 }}>
-              <div className="split-text" style={{ flex: '1.5' }}>
-                <p>You scroll. You consume. You watch. You buy things made by machines in factories.</p>
-                <p>When was the last time you <strong>created</strong> something?</p>
-                <p>When was the last time you made something with your hands that made someone say <strong>&quot;Wait... YOU made this?&quot;</strong></p>
-                <p>When was the last time you felt completely present — not thinking about work, not checking your phone, just... creating?</p>
-                <p>You want a hobby that&apos;s actually meaningful. Something meditative. Something therapeutic.</p>
-                <p>Not another thing to consume. <strong>Something to create.</strong></p>
-              </div>
-              <div style={{ flex: '1.2', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Image src="/meditation.png" alt="Hands working on a bonsai tree" width={600} height={600} style={{ width: '100%', height: 'auto', borderRadius: 16, boxShadow: '0 8px 30px rgba(0,0,0,0.12)' }} />
-              </div>
+            <h2 className="bonsai-center" style={{ marginBottom: 64 }}>But here&apos;s what really holds you back.</h2>
+            <div style={{ maxWidth: 760, margin: '0 auto' }}>
+                <p>You&apos;re not an &quot;artist.&quot;</p>
+                <p>You don&apos;t know what paint to use on fabric.</p>
+                <p>And you&apos;re afraid you&apos;ll ruin a perfectly good pair of jeans.</p>
+                <p>YouTube tutorials skip the basics.</p>
+                <p>You want a creative outlet that&apos;s actually fun and <strong>doesn&apos;t require years of art school.</strong></p>
+                <p>Not another hobby that collects dust. <strong>A skill that lives in your closet.</strong></p>
             </div>
           </section>
-
-          <div className="bonsai-divider" />
 
           {/* ANYONE CAN LEARN */}
           <section style={{ padding: '48px 0' }}>
-            <h2 className="bonsai-center" style={{ marginBottom: 64 }}>Anyone can learn Bonsai.</h2>
-            <div style={{ maxWidth: 640, margin: '0 auto' }}>
-              <p><strong>&rarr; Even if you&apos;ve never touched a bonsai before.</strong> There&apos;s a simple step-by-step method that works on any tree, any species, any skill level. No natural talent needed.</p>
-              <p><strong>&rarr; Even if you think bonsai is too hard.</strong> A finished bonsai is the most impressive thing you can have on your desk. That&apos;s exactly why people will stare at yours.</p>
-              <p><strong>&rarr; Even if you don&apos;t know which tree to pick.</strong> You&apos;ll learn exactly which species fits your space, your light, and your lifestyle. One module and you&apos;ll know more than 90% of beginners.</p>
-              <p><strong>&rarr; Even if you don&apos;t think of yourself as &quot;creative.&quot;</strong> You need a tree, a pair of shears, and 20 minutes. That&apos;s it.</p>
+            <h2 className="bonsai-center" style={{ marginBottom: 64 }}>Anyone can paint jeans.</h2>
+            <div style={{ maxWidth: 760, margin: '0 auto' }}>
+              <p><span style={{ color: '#c75a3a', fontWeight: 600 }}>&rarr; Even if you can&apos;t draw a straight line.</span> You don&apos;t need to. The techniques in this course use stencils, transfers, and simple brushwork that look incredible without any drawing ability.</p>
+              <p><span style={{ color: '#2a8a7a', fontWeight: 600 }}>&rarr; Even if you think you&apos;re &quot;not creative.&quot;</span> Creativity isn&apos;t talent. It&apos;s a set of techniques. Follow the steps, and your jeans will look like a professional painted them.</p>
+              <p><span style={{ color: '#c78a2a', fontWeight: 600 }}>&rarr; Even if you&apos;re scared of ruining your jeans.</span> Module 1 teaches you to practice on scrap denim first. By the time you touch your real pair, you&apos;ll be confident.</p>
+              <p><span style={{ color: '#7a4aad', fontWeight: 600 }}>&rarr; Even if you&apos;ve never held a paintbrush.</span> You need a pair of jeans, some fabric paint, and a few brushes. Total cost: under $25. That&apos;s it.</p>
             </div>
-          </section>
-
-          <div className="bonsai-divider" />
-
-          {/* PHILOSOPHY */}
-          <section style={{ padding: '48px 0' }}>
-            <h2 className="bonsai-center" style={{ marginBottom: 8, fontSize: 'clamp(2rem, 4.5vw, 3rem)' }}>The Philosophy Behind the Practice</h2>
-            <p className="bonsai-center" style={{ margin: '0 auto 28px' }}>Bonsai carries four Japanese principles that quietly change how you see the world and yourself.</p>
-
-            <div className="phil-block">
-              <div className="phil-kanji">侘寂</div>
-              <div className="phil-title">Wabi-Sabi</div>
-              <div className="phil-rom">Beauty in imperfection</div>
-              <p>Your bonsai doesn&apos;t need to be perfect. The crooked trunk, the asymmetric branch, the scar where you pruned too aggressively. These aren&apos;t flaws. They&apos;re character. The tree with history looks alive. The one that looks too polished looks fake.</p>
-            </div>
-
-            <div className="phil-block">
-              <div className="phil-kanji">職人</div>
-              <div className="phil-title">Shokunin</div>
-              <div className="phil-rom">The craftsman&apos;s lifelong pursuit</div>
-              <p>There is no &quot;finished&quot; in bonsai. Your tree will never be &quot;done.&quot; And that&apos;s the point. It grows. You grow. The practice deepens. Year after year, for as long as you choose.</p>
-            </div>
-
-            <div className="phil-block">
-              <div className="phil-kanji">間</div>
-              <div className="phil-title">Ma</div>
-              <div className="phil-rom">The power of negative space</div>
-              <p>In bonsai, what you REMOVE matters more than what you keep. The empty space between branches gives the tree its shape. Ma teaches you that sometimes the most powerful thing you can do is take away, not add.</p>
-            </div>
-
-            <div className="phil-block">
-              <div className="phil-kanji">生き甲斐</div>
-              <div className="phil-title">Ikigai</div>
-              <div className="phil-rom">A reason to wake up</div>
-              <p>Some mornings you&apos;ll check your tree before you check your phone. You&apos;ll notice a new bud where you pruned last month. A branch that finally set at the angle you wired. These tiny moments of progress become your morning ritual. Your ikigai.</p>
-            </div>
-          </section>
-
-          <div className="bonsai-divider" />
-
-          {/* MORE THAN TREES */}
-          <section className="transform">
-            <div className="sm-divider" style={{ marginBottom: 20 }} />
-            <p className="transform-line">&quot;You came here to learn how to shape a tree.<br />You might discover that the tree was shaping you.&quot;</p>
-            <div className="sm-divider" style={{ marginTop: 20 }} />
           </section>
 
           <div className="bonsai-divider" />
 
           {/* INSTRUCTOR */}
           <section className="instructor">
-
-            <div className="instructor-text">
-              <h2>My name is Kenji Murakami (村上健二).</h2>
-              <p>I&apos;ve spent years studying bonsai. Not just the technique, but the philosophy behind it.</p>
-              <p>I&apos;ve learned from Japanese masters whose trees have been displayed at the Imperial Palace.</p>
-              <p>What struck me wasn&apos;t only the craft.</p>
-              <p>It was watching people&apos;s faces when they made their first cut.</p>
-              <div className="sm-divider" style={{ margin: '32px 0' }} />
-              <p>One day, a man brought in a wild juniper he&apos;d dug up from his backyard. Overgrown. Messy.</p>
-              <p>&quot;There&apos;s nothing special about this tree,&quot; he said.</p>
-              <p>I removed five branches. Wired two. Tilted the pot.</p>
-              <p>He stared at it for a full minute. &quot;That was in there the whole time?&quot;</p>
-              <p>They always say that.</p>
-              <p>That&apos;s when I knew this wasn&apos;t only a craft. It was something that needed to be shared.</p>
+            <div className="instructor-img" style={{ overflow: 'hidden', width: '100%', maxWidth: 540, height: 'auto', position: 'relative', borderRadius: 16, border: 'none', background: 'none' }}>
+              <Image src="/katie.webp" alt="Katie holding painted jeans" width={1080} height={1080} style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: 16 }} />
             </div>
-          </section>
-
-
-
-          {/* WHY TEACHING ONLINE */}
-          <section style={{ padding: '80px 0 64px' }}>
-              <h2 className="bonsai-center" style={{ marginBottom: 32 }}>Why I&apos;m Teaching This Online For The First Time</h2>
-              <p>Most people aren&apos;t able to spend thousands of dollars to travel to Japan any time soon.</p>
-              <p>They&apos;ll never sit in a studio with a master.</p>
-              <p>Never experience the meditative practice of doing bonsai.</p>
-              <p>People started asking me to teach them. One woman wrote:</p>
-              <blockquote style={{ borderLeft: '3px solid var(--gold)', paddingLeft: 24, margin: '32px 0', fontStyle: 'italic', color: 'var(--ink)', fontWeight: 500, fontSize: 20, lineHeight: 1.7 }}>&quot;I need to learn this. I have severe anxiety, and bonsai reminds me that I need to stay in the present.&quot;</blockquote>
-              <p>That&apos;s when I knew I had to share this. Not just the technique, but the philosophy. The meditation. The meaning.</p>
-              <p>I put everything I&apos;ve learned into this course. The exact techniques, the philosophy, the materials that cost under $30, not $200 or more. Everything you need to start your first bonsai.</p>
+            <div className="instructor-text">
+              <h2>Hi, I&apos;m Katie!</h2>
+              <p>I&apos;ve painted over 200 pairs of jeans.</p>
+              <p>What started as a weekend experiment turned into an obsession. Then a business. Then a course.</p>
+              <p>I&apos;ve sold custom painted jeans for $150-400 a pair. I&apos;ve painted for friends, for strangers on Instagram, and for my own closet.</p>
+              <p>But the best part wasn&apos;t selling them.</p>
+              <p>It was watching someone pick up a brush for the first time and realize: <strong>&quot;Holy cow, I can actually do this.&quot;</strong></p>
+            </div>
           </section>
 
           </div></div>{/* close container and bonsai-page */}
           <section className="bonsai-page" style={{ background: '#f2efe8', padding: '80px 0 64px' }}>
             <div style={{ maxWidth: 1080, margin: '0 auto', padding: '0 40px' }}>
             <div>
-              <h2 style={{ marginBottom: 44, textAlign: 'center' }}>&quot;Isn&apos;t this an expensive hobby?&quot;</h2>
-              <p><strong>Your first bonsai costs less than lunch.</strong></p>
-              <p>A starter tree is <strong>$12-15</strong>. Shears and wire cost <strong>under $20.</strong></p>
-              <p>That&apos;s it. No $200 specimen. No Japanese tool kit.</p>
-              <p>The course teaches you how to spot <strong>hidden gems</strong> at any nursery.</p>
+              <h2 style={{ marginBottom: 44, textAlign: 'center' }}>&quot;Isn&apos;t this expensive to get into?&quot;</h2>
+              <p><strong>Your first pair costs less than a coffee habit.</strong></p>
+              <p>Fabric paint is <strong>$8-12</strong>. A brush set costs <strong>under $10.</strong> Fabric medium is <strong>$5.</strong></p>
+              <p>That&apos;s it. No airbrush machine. No heat press. No fancy studio.</p>
+              <p>The course teaches you exactly <strong>which supplies to buy</strong> and which ones are a waste of money.</p>
             </div>
             </div>
           </section>
@@ -363,100 +288,101 @@ export default function Home() {
 
           {/* COURSE INTRO */}
           <section className="bonsai-center" style={{ padding: '80px 0 36px' }}>
-            <h2 style={{ marginBottom: 4, fontSize: 'clamp(2.2rem, 5vw, 3.2rem)', fontWeight: 600 }}>Introducing: The Bonsai Path</h2>
-            <p style={{ fontStyle: 'italic', color: 'var(--ink-muted)' }}>盆栽の道: the way of the tray-planted tree</p>
+            <h2 style={{ marginBottom: 4, fontSize: 'clamp(2.2rem, 5vw, 3.2rem)', fontWeight: 600 }}>Introducing: The Painted Jeans Masterclass</h2>
+
           </section>
 
           {/* MODULES */}
           <section style={{ padding: '20px 0 40px' }}>
-            <h2 className="bonsai-center" style={{ marginBottom: 24 }}>&#10022; What&apos;s Inside &#10022;</h2>
+            <h2 className="bonsai-center" style={{ marginBottom: 24 }}>✨ What&apos;s Inside ✨</h2>
 
+            <div className="modules-grid">
             <div className="module-card">
               <div className="module-label">Module 1</div>
-              <h3>Choose Your First Tree, Get the Right Tools &amp; Keep It Alive</h3>
-              <div className="module-sub">The right tree, the right tools, and the right setup for your space, your light, and your life. No more dead plants.</div>
+              <h3>Supplies, Prep &amp; Your First Practice Piece</h3>
+              <div className="module-sub">Everything you need to get started and your first brushstrokes on denim.</div>
               <div className="module-body">
-                <div className="module-img"><Image src="/module1.jpg" alt="Choose Your First Tree" fill style={{ objectFit: 'cover' }} /></div>
+                <div className="module-img"><Image src="/module1.webp" alt="Supplies, paints, brushes and denim prep" fill style={{ objectFit: 'cover' }} /></div>
                 <ul>
-                  <li>&#10022; The <strong>exact tools you need to start</strong> (and the ones you don&apos;t) — what to buy, where to buy it, and what&apos;s a waste of money. Plus <strong>exactly which tree to get and where to find it</strong></li>
-                  <li>&#10022; The <strong>3 species that are nearly impossible to kill</strong> and the 2 &quot;beginner&quot; species that actually aren&apos;t (one is the most commonly recommended tree on the internet)</li>
-                  <li>&#10022; The <strong>watering test that takes 2 seconds</strong> that prevents 90% of bonsai deaths</li>
-                  <li>&#10022; <strong>Indoor vs outdoor: the decision that determines everything.</strong> Get this wrong and your tree is dead in 3 months no matter what else you do</li>
+                  <li>&#10022; The <strong>exact fabric paints, brushes, and palette setup</strong> you see in the image. No guesswork, no wasted money</li>
+                  <li>&#10022; How to <strong>mix paint with fabric medium</strong> so it stays flexible on denim instead of cracking</li>
+                  <li>&#10022; The <strong>3-step denim prep method</strong> that makes paint bond permanently. Skip this and your design peels off in the first wash</li>
+                  <li>&#10022; How to <strong>practice florals on scrap denim</strong> before touching your real jeans</li>
                 </ul>
               </div>
             </div>
 
             <div className="module-card">
               <div className="module-label">Module 2</div>
-              <h3>Pruning &amp; Shaping: Your First Transformation</h3>
-              <div className="module-sub">This is where a nursery plant starts becoming a bonsai. The moment that hooks you.</div>
+              <h3>Your First Full Design: Bold Florals</h3>
+              <div className="module-sub">Paint a stunning sunflower design on light wash denim, step by step.</div>
               <div className="module-body">
-                <div className="module-img"><Image src="/module2.jpg" alt="Pruning and Shaping" fill style={{ objectFit: 'cover' }} /></div>
+                <div className="module-img"><Image src="/module2.webp" alt="Sunflower design on light wash denim" fill style={{ objectFit: 'cover' }} /></div>
                 <ul>
-                  <li>&#10022; How to <strong>see the &quot;tree inside the bush&quot;</strong> and visualize the finished tree before you make a single cut</li>
-                  <li>&#10022; Your first <strong>before-and-after transformation</strong> with 3-5 cuts that turn overgrown nursery stock into something people recognize as a bonsai</li>
-                  <li>&#10022; The <strong>one pruning mistake 80% of beginners make</strong> that stunts growth for an entire season (and the simple fix)</li>
-                  <li>&#10022; <strong>Maintenance pruning in 2 minutes flat</strong> to keep your bonsai looking intentional, not wild</li>
+                  <li>&#10022; How to <strong>sketch and transfer a floral layout</strong> onto denim without freehand drawing</li>
+                  <li>&#10022; <strong>Layering yellow and gold tones</strong> to create sunflower petals that look vibrant and 3D</li>
+                  <li>&#10022; Painting <strong>leaves and stems</strong> that flow naturally with the shape of the jeans</li>
+                  <li>&#10022; <strong>Color theory for light wash denim:</strong> which colors pop and which disappear</li>
                 </ul>
               </div>
             </div>
 
             <div className="module-card">
               <div className="module-label">Module 3</div>
-              <h3>Wiring: The Art of Bending Branches</h3>
-              <div className="module-sub">The technique that gives bonsai their iconic shapes. Easier than it looks.</div>
+              <h3>Painting on Dark Denim: Cherry Blossoms</h3>
+              <div className="module-sub">Master the technique of painting delicate designs on dark wash jeans.</div>
               <div className="module-body">
-                <div className="module-img"><Image src="/module3.jpg" alt="Wiring" fill style={{ objectFit: 'cover' }} /></div>
+                <div className="module-img"><Image src="/module3.webp" alt="Cherry blossoms on dark denim" fill style={{ objectFit: 'cover' }} /></div>
                 <ul>
-                  <li>&#10022; How to <strong>bend a branch without snapping it</strong> using the pressure-and-patience technique</li>
-                  <li>&#10022; Choosing the right <strong>wire gauge</strong> for each branch (too thin = useless, too thick = permanent scars)</li>
-                  <li>&#10022; The <strong>wire-scar mistake that permanently damages bark</strong> and the exact timeline for when to remove wire</li>
-                  <li>&#10022; Create the <strong>illusion of 100 years of wind and weather</strong> on a tree that&apos;s 3 years old</li>
+                  <li>&#10022; Why <strong>dark denim requires a different approach</strong> and how to make colors show up beautifully</li>
+                  <li>&#10022; Painting <strong>delicate cherry blossoms and branches</strong> with soft pinks and browns</li>
+                  <li>&#10022; <strong>Thin coats and layering</strong> to build up opacity without stiffness</li>
+                  <li>&#10022; How to create <strong>depth with light and shadow</strong> so petals look like they&apos;re floating off the fabric</li>
                 </ul>
               </div>
             </div>
 
             <div className="module-card">
               <div className="module-label">Module 4</div>
-              <h3>Repotting, Soil &amp; Root Health</h3>
-              <div className="module-sub">The hidden half of bonsai. What happens below the soil determines everything above it.</div>
+              <h3>Bold Lettering &amp; Text Designs</h3>
+              <div className="module-sub">Paint eye-catching words and typography onto your jeans.</div>
               <div className="module-body">
-                <div className="module-img"><Image src="/module4.jpg" alt="Repotting and Soil" fill style={{ objectFit: 'cover' }} /></div>
+                <div className="module-img"><Image src="/module5new.webp" alt="LOVE text painted on light wash jeans" fill style={{ objectFit: 'cover' }} /></div>
                 <ul>
-                  <li>&#10022; Why <strong>regular potting soil will kill your bonsai</strong> within a year and the $5 soil mix that professionals use</li>
-                  <li>&#10022; <strong>Root pruning demystified</strong>: the technique that sounds terrifying but is actually the secret to keeping trees small AND healthy for decades</li>
-                  <li>&#10022; The <strong>signs your tree is screaming for a repot</strong> that most beginners miss until it&apos;s too late</li>
-                  <li>&#10022; Choosing the right <strong>pot size and style</strong> with the proportion rules that make everything click</li>
+                  <li>&#10022; How to <strong>sketch and paint bold lettering</strong> that looks clean and professional on denim</li>
+                  <li>&#10022; <strong>Mixing colors within letters:</strong> the gradient technique for reds, pinks, and multi-tone text</li>
+                  <li>&#10022; <strong>Adding accents and details</strong> like hearts, sparkles, and line bursts that make your text pop</li>
+                  <li>&#10022; <strong>Full-leg layouts:</strong> how to size and position large vertical text so it flows with the shape of the jeans</li>
                 </ul>
               </div>
             </div>
 
             <div className="module-card">
               <div className="module-label">Module 5</div>
-              <h3>The 5 Classical Styles: Shape With Intention</h3>
-              <div className="module-sub">Each style tells a story about wind, age, and survival. Choose the one your tree is already telling.</div>
+              <h3>Blending &amp; Multi-Color Florals</h3>
+              <div className="module-sub">Create a lush, multi-flower arrangement with purples, blues, and greens.</div>
               <div className="module-body">
-                <div className="module-img"><Image src="/module5.jpg" alt="Classical Styles" fill style={{ objectFit: 'cover' }} /></div>
+                <div className="module-img"><Image src="/module4.webp" alt="Purple and blue floral arrangement on light wash denim" fill style={{ objectFit: 'cover' }} /></div>
                 <ul>
-                  <li>&#10022; <strong>Formal Upright (Chokkan)</strong> the classic straight trunk, perfect symmetry. The most forgiving style for first-timers</li>
-                  <li>&#10022; <strong>Informal Upright (Moyogi)</strong> gentle S-curves that mimic how real trees grow in nature</li>
-                  <li>&#10022; <strong>Slanting (Shakan)</strong> the wind-swept look that adds drama and movement to any desk or shelf</li>
-                  <li>&#10022; <strong>Cascade (Kengai)</strong> the tree that grows &quot;over a cliff.&quot; The most striking display piece</li>
-                  <li>&#10022; How to <strong>read your tree&apos;s natural shape</strong> and choose the style it&apos;s already leaning toward instead of forcing something it&apos;s not</li>
+                  <li>&#10022; How to <strong>blend purples, blues, and pinks</strong> into rich gradients on denim</li>
+                  <li>&#10022; Painting <strong>multiple flower types in one composition</strong>: hydrangeas, anemones, and wildflowers</li>
+                  <li>&#10022; <strong>Arranging a cascading layout</strong> that follows the natural shape of the leg</li>
+                  <li>&#10022; <strong>Heat setting, sealing, and washing</strong> so your finished design lasts through 50+ washes</li>
                 </ul>
               </div>
             </div>
+            </div>{/* close modules-grid */}
           </section>
 
 
           {/* CTA after modules */}
           <section style={{ padding: '56px 0' }}>
             <div className="bonsai-center" style={{ marginBottom: 32 }}>
-              <p style={{ maxWidth: 600, margin: '0 auto 20px' }}>Five modules. A complete system for choosing, styling, and caring for bonsai trees at home, even if you&apos;ve never kept a plant alive.</p>
+              <p style={{ maxWidth: 600, margin: '0 auto 20px' }}>Five modules. A complete system for painting jeans that look professional and last forever, even if you&apos;ve never picked up a paintbrush.</p>
               <p>The full price for this course is <strong>$139</strong>.</p>
-              <p style={{ maxWidth: 560, margin: '0 auto 20px' }}>You&apos;re not going to pay that today. This is the first time I&apos;ve offered this course publicly. I want <strong>the first 50 people</strong> to go through it, share their progress, and help me make it even better.</p>
+              <p style={{ maxWidth: 560, margin: '0 auto 20px' }}>You&apos;re not going to pay that today. This is the first time I&apos;ve offered this course publicly. I want <strong>the first 50 people</strong> to go through it, paint their first pair, and share their results.</p>
             </div>
-            <div style={{ maxWidth: 520, margin: '0 auto', padding: '40px 44px', borderRadius: 14, border: '2px solid rgba(58,99,71,0.25)', background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', textAlign: 'center' }}>
+            <div className="checkout-box" style={{ maxWidth: 520, margin: '0 auto', padding: '40px 44px', borderRadius: 14, border: '2px solid rgba(99,71,160,0.25)', background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', textAlign: 'center' }}>
               <div className="price-old">Normally $139</div>
               <p id="get-access" className="now-only" style={{ fontSize: 44, color: 'var(--ink)', fontWeight: 700, marginBottom: 8 }}>Now Only <span style={{ color: 'var(--gold)' }}>$47</span></p>
               <div className="price-note">One-time payment. Lifetime access.</div>
@@ -485,8 +411,8 @@ export default function Home() {
             <Image src="/guarantee1.webp" alt="90-Day Money Back Guarantee" width={160} height={160} style={{ width: 130, height: 130, marginBottom: 16, margin: '0 auto 16px' }} />
             <h2>Try it risk-free</h2>
             <p><strong>You don&apos;t have to make the final decision now.</strong></p>
-            <p>Get access to the full course. Pick your first tree. Learn how to water it properly. Make your first pruning cuts. Watch new growth emerge exactly where you guided it.</p>
-            <p>If you don&apos;t love it, email hello@thebonsaipath.com within 90 days for a full refund. Within 24 hours. <strong>No questions asked.</strong></p>
+            <p>Get access to the full course. Grab your supplies. Practice on scrap denim. Paint your first real pair. Wear them out and count the compliments.</p>
+            <p>If you don&apos;t love it, email hello@paintedjeans.com within 90 days for a full refund. Within 24 hours. <strong>No questions asked.</strong></p>
           </section>
 
           <div className="bonsai-divider" />
@@ -497,46 +423,32 @@ export default function Home() {
             <h2 className="bonsai-center" style={{ marginBottom: 24 }}>Order today and you also get:</h2>
 
             <div className="bonus-card">
-              <div className="bonus-header"><div className="bonus-label">Bonus 1</div><div className="bonus-value">$47 value</div></div>
-              <h3>Mindfulness Through Bonsai</h3>
-              <div className="bonus-desc">The practice behind the practice. Where craft becomes calm.</div>
+              <div className="bonus-header"><div className="bonus-label">Bonus 1</div><div className="bonus-value">$37 value</div></div>
+              <h3>The Aftercare &amp; Mistake-Fixing Guide</h3>
+              <div className="bonus-desc">How to keep your jeans looking fresh. And how to fix it when things go wrong.</div>
               <div className="bonus-body">
-                <div className="bonus-img"><Image src="/bonus1.jpg" alt="Mindfulness Through Bonsai" fill style={{ objectFit: 'cover' }} /></div>
+                <div className="bonus-img"><Image src="/BONUS1_NEW.webp" alt="Aftercare & Mistake-Fixing Guide" fill style={{ objectFit: 'cover' }} /></div>
                 <ul>
-                  <li>&#10022; <strong>Breathwork while pruning</strong> the 5-minute meditation that happens naturally while you work</li>
-                  <li>&#10022; How to <strong>use your bonsai as a morning ritual</strong> to replace the phone check with a tree check</li>
-                  <li>&#10022; <strong>Sitting meditation with your tree</strong> the Japanese practice of contemplating your bonsai from all angles</li>
-                  <li>&#10022; Why bonsai growers report <strong>38% greater stress reduction</strong> than other hobby practitioners</li>
+                  <li>&#10022; <strong>The exact washing method</strong> that keeps your design vibrant. Temperature, cycle, and drying settings</li>
+                  <li>&#10022; <strong>Heat-setting techniques</strong> that lock paint into the fabric permanently</li>
+                  <li>&#10022; <strong>Touch-up guide:</strong> how to refresh a design after heavy wear without repainting the whole thing</li>
+                  <li>&#10022; <strong>Paint bleeding or cracking?</strong> The rescue techniques that save your design without starting over</li>
+                  <li>&#10022; <strong>15+ common mistakes</strong> with photo examples and step-by-step fixes</li>
                 </ul>
               </div>
             </div>
 
             <div className="bonus-card">
-              <div className="bonus-header"><div className="bonus-label">Bonus 2</div><div className="bonus-value">$37 value</div></div>
-              <h3>The Seasonal Care Calendar</h3>
-              <div className="bonus-desc">Know exactly what to do to your bonsai, every week of every season.</div>
+              <div className="bonus-header"><div className="bonus-label">Bonus 2</div><div className="bonus-value">$49 value</div></div>
+              <h3>The Painted Jeans Business Blueprint</h3>
+              <div className="bonus-desc">Turn your new skill into a side hustle or a full business.</div>
               <div className="bonus-body">
-                <div className="bonus-img"><Image src="/bonus2.jpg" alt="Seasonal Care Calendar" fill style={{ objectFit: 'cover' }} /></div>
+                <div className="bonus-img"><Image src="/BONUS3_NEW.webp" alt="Painted jeans business" fill style={{ objectFit: 'cover' }} /></div>
                 <ul>
-                  <li>&#10022; <strong>Spring:</strong> When to repot, fertilize, and let your tree explode with new growth</li>
-                  <li>&#10022; <strong>Summer:</strong> Watering adjustments, sun protection, and the best window for wiring</li>
-                  <li>&#10022; <strong>Autumn:</strong> Reducing fertilizer, preparing for dormancy, enjoying fall color on deciduous species</li>
-                  <li>&#10022; <strong>Winter:</strong> Cold protection, dormancy care, and indoor overwintering for tender species</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="bonus-card">
-              <div className="bonus-header"><div className="bonus-label">Bonus 3</div><div className="bonus-value">$29 value</div></div>
-              <h3>The Bonsai Troubleshooting Guide</h3>
-              <div className="bonus-desc">Your tree is trying to talk to you. This guide teaches you to listen.</div>
-              <div className="bonus-body">
-                <div className="bonus-img"><Image src="/bonus3.jpg" alt="Bonsai Troubleshooting Guide" fill style={{ objectFit: 'cover' }} /></div>
-                <ul>
-                  <li>&#10022; <strong>Yellowing leaves?</strong> It&apos;s not always overwatering: the 4 possible causes and fixes</li>
-                  <li>&#10022; <strong>Dropping leaves suddenly?</strong> Seasonal, stress, or dying: how to tell the difference in 30 seconds</li>
-                  <li>&#10022; <strong>Leggy, stretched growth?</strong> The light and pruning adjustment that restores compact shape</li>
-                  <li>&#10022; <strong>15+ photo-matched symptoms</strong> with clear diagnosis and step-by-step solutions</li>
+                  <li>&#10022; <strong>How I sell custom painted jeans for $150-400+</strong> per pair on Instagram and Etsy</li>
+                  <li>&#10022; <strong>Photographing your work:</strong> how to shoot painted jeans with just your phone so they look professional</li>
+                  <li>&#10022; <strong>Setting up an Etsy or Depop shop</strong> with listings that actually convert</li>
+                  <li>&#10022; <strong>Taking commissions:</strong> from first DM to final delivery, including deposits, revisions, and shipping</li>
                 </ul>
               </div>
             </div>
@@ -546,14 +458,14 @@ export default function Home() {
           <section style={{ padding: '36px 0' }} id="pricing">
             <h2 className="bonsai-center" style={{ marginBottom: 18 }}>Here&apos;s everything you get:</h2>
             <div className="stack-row stack-total"><span className="label">&#10003; 5 Core Modules</span><span className="val">$139</span></div>
-            <div className="stack-row"><span className="label">&#10003; Mindfulness Through Bonsai</span><span className="val">$47</span></div>
-            <div className="stack-row"><span className="label">&#10003; Seasonal Care Calendar</span><span className="val">$37</span></div>
-            <div className="stack-row"><span className="label">&#10003; Bonsai Troubleshooting Guide</span><span className="val">$29</span></div>
-            <div className="stack-row" style={{ borderBottom: 'none' }}><span className="label" style={{ fontWeight: 700, color: 'var(--ink)' }}>Total Value</span><span className="val" style={{ fontSize: 16 }}>$252</span></div>
+
+            <div className="stack-row"><span className="label">&#10003; Aftercare &amp; Mistake-Fixing Guide</span><span className="val">$37</span></div>
+            <div className="stack-row"><span className="label">&#10003; The Painted Jeans Business Blueprint</span><span className="val">$49</span></div>
+            <div className="stack-row" style={{ borderBottom: 'none' }}><span className="label" style={{ fontWeight: 700, color: 'var(--ink)' }}>Total Value</span><span className="val" style={{ fontSize: 16 }}>$225</span></div>
           </section>
 
-          <div style={{ maxWidth: 520, margin: '0 auto', padding: '40px 44px', borderRadius: 14, border: '2px solid rgba(58,99,71,0.25)', background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', textAlign: 'center' }}>
-            <div className="price-old">Normally $252</div>
+          <div className="checkout-box" style={{ maxWidth: 520, margin: '0 auto', padding: '40px 44px', borderRadius: 14, border: '2px solid rgba(99,71,160,0.25)', background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', textAlign: 'center' }}>
+            <div className="price-old">Normally $225</div>
             <p className="now-only" style={{ fontSize: 44, color: 'var(--ink)', fontWeight: 700, marginBottom: 8 }}>Now Only <span style={{ color: 'var(--gold)' }}>$47</span></p>
             <div className="price-note">One-time payment. Lifetime access.</div>
             <div style={{ marginTop: 20 }}><CheckoutButton /></div>
@@ -581,17 +493,17 @@ export default function Home() {
             <h2 className="bonsai-center" style={{ marginBottom: 18 }}>Order today and you also get:</h2>
 
             <div className="bonus-card mega">
-              <div className="bonus-header"><div className="bonus-label">Mega Bonus</div><div className="bonus-value">$79 value</div></div>
-              <h3>The Bonsai Display &amp; Styling Masterclass</h3>
-              <div className="bonus-desc">Your tree is shaped. Now make it the centerpiece of any room.</div>
+              <div className="bonus-header"><div className="bonus-label">Mega Bonus</div><div className="bonus-value">$67 value</div></div>
+              <h3>The Back Pocket Duo: Waves &amp; Rainbow</h3>
+              <div className="bonus-desc">Paint a matching pair of back pockets that turns every pair of jeans into a statement piece.</div>
               <div className="bonus-body">
-                <div className="bonus-img"><Image src="/megabonus.jpg" alt="Display and Styling Masterclass" fill style={{ objectFit: 'cover' }} /></div>
+                <div className="bonus-img"><Image src="/megabonus2.webp" alt="Wave and rainbow painted on back pockets" fill style={{ objectFit: 'cover' }} /></div>
                 <ul>
-                  <li>&#10022; How to choose <strong>the perfect pot</strong> glazed vs unglazed, proportion rules, and color theory that makes everything click</li>
-                  <li>&#10022; <strong>Display surfaces and stands</strong> to create a museum-quality presentation on any shelf, desk, or table</li>
-                  <li>&#10022; The <strong>accent plant technique</strong> to add moss, companion plants, and stones to create a complete miniature landscape</li>
-                  <li>&#10022; <strong>Photography tips</strong> to capture your bonsai so it looks as stunning on screen as it does in person</li>
-                  <li>&#10022; Turn your bonsai into the <strong>most-commented thing in any room</strong> you place it in</li>
+                  <li>&#10022; <strong>Full walkthrough of both pocket designs:</strong> ocean wave on one side, rainbow and clouds on the other</li>
+                  <li>&#10022; <strong>Painting realistic waves</strong> with layered blues, teals, and white foam that look like they&apos;re crashing</li>
+                  <li>&#10022; <strong>Soft cloud technique:</strong> how to build fluffy, realistic clouds with dry brushing and blending</li>
+                  <li>&#10022; <strong>Clean rainbow stripes:</strong> the taping and freehand methods for crisp, even color bands</li>
+                  <li>&#10022; <strong>Making both pockets work together</strong> as a cohesive pair that looks intentional, not random</li>
                 </ul>
               </div>
             </div>
@@ -611,15 +523,15 @@ export default function Home() {
           <section style={{ padding: '36px 0' }}>
             <h2 className="bonsai-center" style={{ marginBottom: 18 }}>Here&apos;s everything you get:</h2>
             <div className="stack-row stack-total"><span className="label">&#10003; 5 Core Modules</span><span className="val">$139</span></div>
-            <div className="stack-row"><span className="label">&#10003; Mindfulness Through Bonsai</span><span className="val">$47</span></div>
-            <div className="stack-row"><span className="label">&#10003; Seasonal Care Calendar</span><span className="val">$37</span></div>
-            <div className="stack-row"><span className="label">&#10003; Bonsai Troubleshooting Guide</span><span className="val">$29</span></div>
-            <div className="stack-row"><span className="label">&#10003; Display &amp; Styling Masterclass</span><span className="val">$79</span></div>
-            <div className="stack-row" style={{ borderBottom: 'none' }}><span className="label" style={{ fontWeight: 700, color: 'var(--ink)' }}>Total Value</span><span className="val" style={{ fontSize: 16 }}>$331</span></div>
+
+            <div className="stack-row"><span className="label">&#10003; Aftercare &amp; Mistake-Fixing Guide</span><span className="val">$37</span></div>
+            <div className="stack-row"><span className="label">&#10003; The Painted Jeans Business Blueprint</span><span className="val">$49</span></div>
+            <div className="stack-row"><span className="label">&#10003; The Back Pocket Duo: Waves &amp; Rainbow</span><span className="val">$67</span></div>
+            <div className="stack-row" style={{ borderBottom: 'none' }}><span className="label" style={{ fontWeight: 700, color: 'var(--ink)' }}>Total Value</span><span className="val" style={{ fontSize: 16 }}>$292</span></div>
           </section>
 
-          <div style={{ maxWidth: 520, margin: '0 auto', padding: '40px 44px', borderRadius: 14, border: '2px solid rgba(58,99,71,0.25)', background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', textAlign: 'center' }}>
-            <div className="price-old">Normally $331</div>
+          <div className="checkout-box" style={{ maxWidth: 520, margin: '0 auto', padding: '40px 44px', borderRadius: 14, border: '2px solid rgba(99,71,160,0.25)', background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', textAlign: 'center' }}>
+            <div className="price-old">Normally $292</div>
             <p className="now-only" style={{ fontSize: 44, color: 'var(--ink)', fontWeight: 700, marginBottom: 8 }}>Now Only <span style={{ color: 'var(--gold)' }}>$47</span></p>
             <div className="price-note">One-time payment. Lifetime access.</div>
             <div style={{ marginTop: 20 }}><CheckoutButton /></div>
@@ -644,18 +556,21 @@ export default function Home() {
           {/* CLOSING */}
           <section className="closing">
             <div className="sm-divider" style={{ marginBottom: 20 }} />
-            <p className="closing-quote">&quot;In a world that demands speed, bonsai asks you to slow down. And in that slowness, you find something you forgot you had.&quot;</p>
-            <p style={{ color: 'var(--ink-muted)', marginBottom: 0 }}>— Kenji Murakami, founder of The Bonsai Path</p>
+            <p className="closing-quote">&quot;You opened your closet looking for something to wear. You might close it knowing you can make anything you want.&quot;</p>
+            <p style={{ color: 'var(--ink-muted)', marginBottom: 0 }}>&mdash; Katie</p>
           </section>
+
+        </div>
+      </div>
 
           {/* FOOTER */}
           <footer className="bonsai-footer">
-            <p>&copy; 2026 The Bonsai Path. All rights reserved.</p>
-            <p style={{ marginTop: 5 }}><a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a></p>
-            <p style={{ marginTop: 16, fontSize: 11, color: 'var(--ink-muted)', maxWidth: 600, margin: '16px auto 0', lineHeight: 1.5 }}>This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+            <div style={{ maxWidth: 1080, margin: '0 auto', padding: '0 40px' }}>
+              <p>&copy; 2026 Painted Jeans. All rights reserved.</p>
+              <p style={{ marginTop: 5 }}><a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a></p>
+              <p style={{ marginTop: 16, fontSize: 11, maxWidth: 600, margin: '16px auto 0', lineHeight: 1.5 }}>This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+            </div>
           </footer>
-        </div>
-      </div>
     </main>
   );
 }

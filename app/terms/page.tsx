@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — The Bonsai Path",
+  title: "Terms of Service — The Painted Jeans Masterclass",
 };
 
 export default function TermsPage() {
@@ -16,7 +16,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-2xl font-serif mb-3 text-cream">1. Overview</h2>
           <p>
-            By purchasing and accessing The Bonsai Path (&quot;the Course&quot;),
+            By purchasing and accessing The Painted Jeans Masterclass (&quot;the Course&quot;),
             you agree to be bound by these Terms of Service. If you do not agree to these
             terms, please do not purchase or use the Course.
           </p>
@@ -60,7 +60,7 @@ export default function TermsPage() {
           <h2 className="text-2xl font-serif mb-3 text-cream">5. Intellectual Property</h2>
           <p>
             All Course content &mdash; including videos, text, images, templates, and
-            downloadable materials &mdash; is the intellectual property of The Bonsai Path
+            downloadable materials &mdash; is the intellectual property of The Painted Jeans Masterclass
             and is protected by copyright law. Purchasing the Course does not
             transfer ownership of any intellectual property.
           </p>
@@ -70,7 +70,7 @@ export default function TermsPage() {
           <h2 className="text-2xl font-serif mb-3 text-cream">6. Disclaimer</h2>
           <p>
             The Course is provided for educational purposes. Results may vary depending on
-            individual effort, experience, and growing conditions. We do not guarantee
+            individual effort and experience. We do not guarantee
             specific results. Any figures referenced on the website or in the Course are
             examples only and should not be considered as promises of typical results.
           </p>
@@ -79,10 +79,10 @@ export default function TermsPage() {
         <section>
           <h2 className="text-2xl font-serif mb-3 text-cream">7. Liability</h2>
           <p>
-            Bonsai cultivation involves working with living plants and tools.
+            Painting involves working with paints, chemicals, and tools.
             You are solely responsible for following proper safety procedures.
-            The Bonsai Path is not liable for any issues that may arise from
-            following the techniques taught in the Course.
+            The Painted Jeans Masterclass is not liable for any damage to clothing or materials
+            that may arise from following the techniques taught in the Course.
           </p>
         </section>
 
@@ -99,8 +99,8 @@ export default function TermsPage() {
           <h2 className="text-2xl font-serif mb-3 text-cream">9. Contact</h2>
           <p>
             If you have any questions about these Terms, please contact us at{" "}
-            <a href="mailto:hello@thebonsaipath.com" className="text-gold underline">
-              hello@thebonsaipath.com
+            <a href="mailto:hello@paintedjeans.com" className="text-gold underline">
+              hello@paintedjeans.com
             </a>
           </p>
         </section>

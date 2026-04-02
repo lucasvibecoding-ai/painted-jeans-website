@@ -14,11 +14,11 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Bonsai: Learn The 1,500-Year-Old Japanese Practice of Calming Down Your Mind",
+  title: "Painted Jeans: Turn Any Old Jeans Into Custom Wearable Art — In a Weekend",
   description:
-    "Bonsai is more than just a tree. It's a 1,500-year-old Japanese art of releasing stress, easing anxiety, and letting go of overthinking.",
+    "Learn how to turn any old pair of jeans into custom painted jeans you'll actually wear. No art experience needed. Step-by-step video course.",
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.ico.jpg",
   },
 };
 

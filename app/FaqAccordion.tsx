@@ -4,40 +4,44 @@ import { useState } from 'react';
 
 const faqs = [
   {
-    q: 'Do I need any experience with plants or bonsai?',
-    a: "None at all. This course is built for complete beginners, including people who've killed every houseplant they've owned. Module 1 starts by matching you with the right tree for your specific environment and teaches you the exact care routine to keep it alive from day one.",
+    q: 'Do I need any art experience or painting skills?',
+    a: "None at all. This course is built for complete beginners, including people who haven't painted since elementary school. The techniques use stencils, transfers, and simple brushwork that anyone can follow. You don't need to be able to draw.",
   },
   {
-    q: 'How much does everything cost to get started?',
-    a: "Under $35 total. A starter tree ($12-15 from any nursery or online), a pair of shears ($8-12), and some aluminum bonsai wire ($5-10). The course includes a complete shopping guide with links. You do NOT need expensive Japanese tools or a premium specimen tree.",
+    q: 'How much do supplies cost to get started?',
+    a: "Under $25 total. Fabric paint ($8-12), a brush set ($8-10), and fabric medium ($5). The course includes a complete shopping guide with direct links. You do NOT need an airbrush, heat press, or expensive art supplies.",
   },
   {
-    q: 'Will you tell me which tree to buy and where to get it?',
-    a: "Yes. Module 1 walks you through exactly which species to pick based on your climate, light, and whether you're growing indoors or outdoors. It also includes a shopping guide with specific links so you know exactly where to buy your first tree and what to look for.",
+    q: 'Will you tell me exactly which paints and brushes to buy?',
+    a: "Yes. The Complete Supply Guide bonus walks you through every product with direct links. It covers the best fabric paints (Angelus, Jacquard, DecoArt), which brushes you actually need, and which products are a waste of money.",
   },
   {
-    q: 'Can I grow bonsai indoors?',
-    a: "Yes, with the right species. Tropical species like ficus, Chinese elm, and jade thrive indoors year-round near a bright window. The course covers both indoor and outdoor species and helps you choose based on your living situation and climate. You do not need a garden.",
+    q: "Won't the paint crack or wash off?",
+    a: "Not if you follow the prep and finishing steps in the course. Module 1 covers the 3-step denim prep method, and Module 4 covers heat setting and sealing. When done correctly, painted jeans last through 50+ washes without cracking, peeling, or fading.",
   },
   {
-    q: 'How much time does bonsai take daily?',
-    a: "Daily care is 2-3 minutes: checking soil moisture and watering when needed. Pruning and shaping sessions happen every few weeks and take 15-30 minutes. It's one of the lowest time-commitment hobbies that still feels deeply rewarding.",
+    q: 'Will the paint fade over time?',
+    a: "Not if you seal it properly. Module 4 covers heat setting and sealant options that lock the paint in. With the right finishing steps, your design stays vibrant through years of regular wear and washing.",
   },
   {
-    q: 'How long until my bonsai actually looks good?',
-    a: 'Your first pruning session creates a dramatic transformation, often within the first weekend. Going from "overgrown nursery plant" to "that\'s clearly a bonsai" can happen in one afternoon with the right cuts. Deeper refinement builds over months and years, but the initial "wow" moment is immediate.',
+    q: 'How long does it take to paint a pair of jeans?',
+    a: "A simple design takes 2-4 hours. A more detailed piece might take a full afternoon or be spread across a weekend. The course teaches you designs at every complexity level so you can start simple and work your way up.",
   },
   {
-    q: "It takes years to see results. I'm too impatient.",
-    a: "Your FIRST pruning session transforms a bushy plant into something that's clearly a bonsai. That happens in one afternoon, not one decade. The \"holy shit, I made that\" moment? That's day one. Every week after, your tree shows you something new.",
+    q: 'Can I use any jeans or do I need a specific type?',
+    a: "Any jeans work — old, new, thrift store, any wash. Light wash denim shows colors best, but dark wash creates a different dramatic look. The course covers how to choose and prep any type of denim for the best results.",
   },
   {
-    q: 'What if my tree dies?',
-    a: "The Troubleshooting Guide covers every warning sign so you can intervene before it's too late. But honestly, even masters lose trees. It's part of learning. That's exactly why we start you with affordable nursery stock ($12-15). A dead $12 tree is a lesson, not a disaster. And the next one will be better because of what you learned.",
+    q: "What if I mess up? Can I fix mistakes?",
+    a: "Yes. The Mistake-Fixing Toolkit bonus covers every common mistake with step-by-step fixes. Paint bleeding? Fixable. Wrong color? Layer over it. And since you practice on scrap denim first in Module 1, you'll have confidence before touching your real jeans.",
+  },
+  {
+    q: 'Can I actually sell painted jeans?',
+    a: "Absolutely. Custom painted jeans sell for $150-400+ on Instagram and Etsy. Module 5 and the Mega Bonus cover pricing, photographing your work, setting up an Etsy shop, taking commissions, and building a following. Some students earn $500/month as a side hustle.",
   },
   {
     q: "What's the refund policy?",
-    a: "90-day money-back guarantee. Try the entire course. Pick your tree. Make your first cuts. If you don't love it, email us within 90 days and we'll refund you in full. No questions asked. No hoops.",
+    a: "90-day money-back guarantee. Try the entire course. Paint your first pair. If you don't love it, email us within 90 days and we'll refund you in full. No questions asked. No hoops.",
   },
   {
     q: 'How is the content delivered?',
@@ -49,7 +53,7 @@ const faqs = [
   },
   {
     q: 'Have a specific question?',
-    a: "Email us at hello@thebonsaipath.com and we'll get back to you as soon as possible.",
+    a: "Email us at hello@paintedjeans.com and we'll get back to you as soon as possible.",
   },
 ];
 

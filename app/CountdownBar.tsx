@@ -27,7 +27,7 @@ export default function CountdownBar() {
   }, []);
 
   useEffect(() => {
-    setPurchased(localStorage.getItem('bonsai_purchased') === 'true');
+    setPurchased(localStorage.getItem('painted_jeans_purchased') === 'true');
   }, []);
 
   return (
@@ -39,10 +39,6 @@ export default function CountdownBar() {
     >
       <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2 sm:gap-4" style={{ whiteSpace: 'nowrap' }}>
-          <span style={{ fontFamily: "'Lora', Georgia, serif", fontWeight: 700, fontSize: 20, color: '#1e1a14' }}>
-            Bonsai
-          </span>
-          <span style={{ color: 'rgba(58,99,71,0.3)' }}>|</span>
           <span className="hidden sm:inline text-sm" style={{ color: '#7d7568' }}>{purchased ? '49' : '48'}/50 Students Signed Up</span>
           <span className="hidden sm:inline" style={{ color: 'rgba(58,99,71,0.3)' }}>|</span>
           <span className="hidden sm:inline text-sm" style={{ color: '#b44', fontWeight: 600 }}>Only {purchased ? '1' : '2'} Spots Left</span>
@@ -54,7 +50,7 @@ export default function CountdownBar() {
           onClick={() => document.getElementById('get-access')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
           type="button"
           className="text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer hover:brightness-110 hover:scale-105"
-          style={{ background: 'linear-gradient(135deg, #3a6347, #264432)' }}
+          style={{ background: 'linear-gradient(135deg, #5a8f6c, #3a6347)' }}
         >
           Get Access
         </button>

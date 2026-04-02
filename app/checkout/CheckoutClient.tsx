@@ -377,7 +377,7 @@ export default function CheckoutClient() {
             </a>
 
             <div className="product-name">Permanent Access</div>
-            <div className="product-title"><span className="desktop-title">The Bonsai Path</span><span className="mobile-title">Bonsai Class</span></div>
+            <div className="product-title"><span className="desktop-title">The Painted Jeans Masterclass</span><span className="mobile-title">Painted Jeans</span></div>
             <div className="product-price">
               $47.00<span className="currency">USD</span>
             </div>
@@ -385,23 +385,19 @@ export default function CheckoutClient() {
             <div className="summary-divider" />
 
             <div className="line-item">
-              <span className="item-name">The Bonsai Path (5 Modules)</span>
+              <span className="item-name">5 Core Modules</span>
               <span className="item-price">$47.00</span>
             </div>
             <div className="line-item">
-              <span className="item-name">Seasonal Care Calendar</span>
+              <span className="item-name">Aftercare &amp; Mistake-Fixing Guide</span>
               <span className="item-price">FREE</span>
             </div>
             <div className="line-item">
-              <span className="item-name">Bonsai Troubleshooting Guide</span>
+              <span className="item-name">The Painted Jeans Business Blueprint</span>
               <span className="item-price">FREE</span>
             </div>
             <div className="line-item">
-              <span className="item-name">Mindfulness Through Bonsai</span>
-              <span className="item-price">FREE</span>
-            </div>
-            <div className="line-item">
-              <span className="item-name">Display &amp; Styling Masterclass</span>
+              <span className="item-name">The Back Pocket Duo: Waves &amp; Rainbow</span>
               <span className="item-price">FREE</span>
             </div>
 

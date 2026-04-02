@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import PurchaseFlag from "./PurchaseFlag";
+import PurchaseTracker from "./PurchaseTracker";
 
 export const metadata: Metadata = {
-  title: "You're In! — The Bonsai Path",
+  title: "You're In! — The Painted Jeans Masterclass",
 };
 
 export default function Success() {
   return (
     <main className="min-h-screen flex items-center justify-center px-6 py-20" style={{ background: '#f8f5f0' }}>
       <PurchaseFlag />
+      <Suspense fallback={null}>
+        <PurchaseTracker />
+      </Suspense>
       <div className="max-w-lg w-full text-center space-y-8">
         <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto" style={{ background: 'rgba(58,99,71,0.1)' }}>
           <svg
@@ -31,7 +36,7 @@ export default function Success() {
 
         <p className="text-lg sm:text-xl text-muted leading-relaxed">
           Your payment went through and you now have{" "}
-          <strong className="text-cream">lifetime access</strong> to The Bonsai Path.
+          <strong className="text-cream">lifetime access</strong> to The Painted Jeans Masterclass.
         </p>
 
         <div className="rounded-xl p-6 sm:p-8 text-left space-y-4 shadow-sm" style={{ background: '#f8f5f0', border: '1px solid rgba(58,99,71,0.15)' }}>
@@ -45,7 +50,7 @@ export default function Success() {
             </li>
             <li className="flex items-start gap-3">
               <span className="text-gold font-bold flex-shrink-0">2.</span>
-              <span>Start with <strong className="text-cream">Module 1</strong> — choose your first tree and learn to keep it alive</span>
+              <span>Start with <strong className="text-cream">Module 1</strong> — grab your supplies and prep your first piece of denim</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-gold font-bold flex-shrink-0">3.</span>
@@ -56,14 +61,14 @@ export default function Success() {
 
         <p className="text-sm" style={{ color: 'rgba(125,117,104,0.6)' }}>
           Didn&apos;t get the email? Check your spam folder or contact us at{" "}
-          <a href="mailto:hello@thebonsaipath.com" className="text-gold underline">
-            hello@thebonsaipath.com
+          <a href="mailto:hello@paintedjeans.com" className="text-gold underline">
+            hello@paintedjeans.com
           </a>
         </p>
 
         <div className="pt-4">
           <p className="text-muted text-lg font-medium">
-            Welcome to the path 🌳
+            Welcome to the masterclass!
           </p>
         </div>
 
