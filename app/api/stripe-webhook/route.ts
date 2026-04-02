@@ -40,14 +40,14 @@ export async function POST(request: Request) {
       customerEmail = charge.billing_details?.email || null;
     }
 
-    const toEmail = customerEmail || 'hello@thebonsaipath.com';
+    const toEmail = customerEmail || 'hello@paintedjeans.com';
     console.log(`Sending confirmation email to: ${toEmail} (receipt_email was: ${paymentIntent.receipt_email})`);
     const html = await render(OrderConfirmation({ customerEmail: toEmail }));
 
     await resend.emails.send({
-      from: 'Kenji Murakami - Bonsai Path <hello@thebonsaipath.com>',
+      from: 'Katie - The Painted Jeans Masterclass <hello@paintedjeans.com>',
       to: toEmail,
-      replyTo: 'hello@thebonsaipath.com',
+      replyTo: 'hello@paintedjeans.com',
       subject: 'About your course purchase — important update',
       html,
     });
