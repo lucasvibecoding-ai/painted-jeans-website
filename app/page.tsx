@@ -212,7 +212,7 @@ export default function Home() {
             <p style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: 'var(--ink-muted)', marginTop: 8, maxWidth: 600, marginLeft: 'auto', marginRight: 'auto', fontStyle: 'italic' }}>Without needing years of practice or expensive supplies</p>
 
             <div style={{ marginTop: 36, display: 'flex', justifyContent: 'center' }}>
-              <Image id="hero" src="/hero3.png" alt="Custom painted jeans" width={1024} height={1024} style={{ width: '100%', maxWidth: 560, height: 'auto', borderRadius: 16, boxShadow: '0 12px 40px rgba(0,0,0,0.15)' }} />
+              <Image id="hero" src="/hero4.jpg" alt="Custom painted jeans" width={1024} height={1024} style={{ width: '100%', maxWidth: 560, height: 'auto', borderRadius: 16, boxShadow: '0 12px 40px rgba(0,0,0,0.15)' }} />
             </div>
           </section>
 
