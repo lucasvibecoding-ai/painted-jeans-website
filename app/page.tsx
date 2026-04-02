@@ -109,7 +109,7 @@ export default function Home() {
         .guarantee-icon { width: 40px; height: 40px; border-radius: 50%; background: var(--cream); border: 1.5px solid var(--gold); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
         .payment-icons { display: flex; gap: 6px; justify-content: center; margin-top: 14px; opacity: 0.4; }
         .payment-icons span { font-size: 12px; padding: 4px 10px; border: 1px solid var(--stone); border-radius: 3px; color: var(--ink-muted); font-weight: 500; }
-        .ps-note { margin-top: 16px; font-size: 14px; color: var(--ink-muted); font-style: italic; }
+        .ps-note { margin-top: 16px; font-size: 18px; color: var(--ink-muted); font-style: italic; }
 
         /* Guarantee section */
         .guarantee-section { padding: 48px 0; text-align: center; }
@@ -232,14 +232,13 @@ export default function Home() {
 
           {/* BUT HERE'S WHAT REALLY HOLDS YOU BACK */}
           <section style={{ padding: '0 0 56px' }}>
-            <h2 className="bonsai-center" style={{ marginBottom: 64 }}>But here&apos;s what really holds you back.</h2>
+            <h2 className="bonsai-center" style={{ marginBottom: 64 }}>This will be your most complimented pair.</h2>
             <div style={{ maxWidth: 760, margin: '0 auto' }}>
-                <p>You&apos;re not an &quot;artist.&quot;</p>
-                <p>You don&apos;t know what paint to use on fabric.</p>
-                <p>And you&apos;re afraid you&apos;ll ruin a perfectly good pair of jeans.</p>
-                <p>YouTube tutorials skip the basics.</p>
-                <p>You want a creative outlet that&apos;s actually fun and <strong>doesn&apos;t require years of art school.</strong></p>
-                <p>Not another hobby that collects dust. <strong>A skill that lives in your closet.</strong></p>
+                <p>You walk into a coffee shop and someone taps your shoulder. &quot;Wait, where are those from?&quot;</p>
+                <p>You post a photo and the comments won&apos;t stop.</p>
+                <p>Friends start texting you asking if you can make them a pair.</p>
+                <p>Not because you tried to stand out. <strong>Because you made something real.</strong></p>
+                <p>That forgotten pair collecting dust in the back of your closet? <strong>It&apos;s about to become the most complimented thing you own.</strong></p>
             </div>
           </section>
 
