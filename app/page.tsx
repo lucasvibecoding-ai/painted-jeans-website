@@ -105,6 +105,7 @@ export default function Home() {
         /* CTA */
         .cta-block { text-align: center; padding: 56px 0; }
         .price-old { font-size: 26px; color: var(--ink-muted); text-decoration: line-through; margin-bottom: 4px; }
+        .now-only { font-size: 44px; }
         .price { font-size: 56px; color: var(--green-deep); margin-bottom: 4px; font-weight: 700; }
         .price-note { font-size: 16px; color: var(--ink-muted); margin-bottom: 24px; font-weight: 400; }
         .guarantee-badge { display: flex; align-items: center; gap: 10px; justify-content: center; margin-top: 20px; font-size: 15px; color: var(--ink-muted); }
@@ -127,7 +128,7 @@ export default function Home() {
         .bonus-value { font-size: 12px; color: var(--green); font-weight: 700; background: rgba(99,71,160,0.1); padding: 2px 10px; border-radius: 100px; letter-spacing: 0.5px; }
         .bonus-card h3 { font-size: 1.3rem; color: var(--gold); margin-bottom: 4px; }
         .module-card h3 { color: var(--gold); }
-        .bonus-desc { font-size: 18px; color: var(--ink-muted); margin-bottom: 14px; }
+        .bonus-desc { font-size: 20px; color: var(--ink-muted); margin-bottom: 14px; }
         .bonus-card ul { list-style: none; padding: 0; }
         .bonus-card li { padding: 6px 0; font-size: 18px; line-height: 1.6; }
         .mega { border-color: rgba(176,141,58,0.3); background: linear-gradient(135deg, var(--card), var(--gold-pale)); }
@@ -190,14 +191,17 @@ export default function Home() {
         @media (max-width: 480px) {
           .bonsai-page .container { padding: 0 24px; }
           .bonsai-page { font-size: 18px; }
-          .bonsai-page p:not(.hero-intro), .bonsai-page li { font-size: 18px !important; }
+          .bonsai-page p:not(.hero-intro):not(.now-only), .bonsai-page li { font-size: 18px !important; }
           .module-img, .bonus-img { height: auto; aspect-ratio: 1/1; }
+          .bonus-card h3, .module-card h3 { margin-bottom: 14px !important; }
+          .bonus-desc, .module-sub { margin-bottom: 22px !important; }
           .badge { font-size: 10px; letter-spacing: 1.5px; padding: 5px 12px; }
           .payment-method-btn { font-size: 13px; padding: 10px 12px; }
           #hero { width: 100% !important; margin-top: 8px; max-width: 100% !important; margin-left: -16px !important; margin-right: -16px !important; width: calc(100% + 32px) !important; border-radius: 8px !important; }
           .imagine-section { padding-top: 24px !important; }
           .imagine-section h2 { font-size: 30px !important; }
-          .now-only { font-size: 32px !important; }
+          .now-only { font-size: 36px !important; }
+          .price-old { font-size: 20px !important; }
           .cta-btn { font-size: 1.5rem !important; }
           .faq-q-text { font-weight: 500 !important; font-size: 18px !important; }
           .faq-q { font-size: 18px !important; }
@@ -394,7 +398,7 @@ export default function Home() {
             </div>
             <div className="checkout-box" style={{ maxWidth: 520, margin: '0 auto', padding: '40px 44px', borderRadius: 14, border: '2px solid rgba(99,71,160,0.25)', background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', textAlign: 'center' }}>
               <div className="price-old">Normally $97</div>
-              <p id="get-access" className="now-only" style={{ fontSize: 44, color: 'var(--ink)', fontWeight: 700, marginBottom: 8 }}>Now Only <span style={{ color: 'var(--gold)' }}>$47</span></p>
+              <p id="get-access" className="now-only" style={{ color: 'var(--ink)', fontWeight: 700, marginBottom: 8 }}>Now Only <span style={{ color: 'var(--gold)' }}>$47</span></p>
               <div className="price-note">One-time payment. Lifetime access.</div>
               <div style={{ marginTop: 20 }}><CheckoutButton /></div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 20, width: '100%' }}>
@@ -494,7 +498,7 @@ export default function Home() {
 
           <div className="checkout-box" style={{ maxWidth: 520, margin: '0 auto', padding: '40px 44px', borderRadius: 14, border: '2px solid rgba(99,71,160,0.25)', background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', textAlign: 'center' }}>
             <div className="price-old">Normally $242</div>
-            <p className="now-only" style={{ fontSize: 44, color: 'var(--ink)', fontWeight: 700, marginBottom: 8 }}>Now Only <span style={{ color: 'var(--gold)' }}>$47</span></p>
+            <p className="now-only" style={{ color: 'var(--ink)', fontWeight: 700, marginBottom: 8 }}>Now Only <span style={{ color: 'var(--gold)' }}>$47</span></p>
             <div className="price-note">One-time payment. Lifetime access.</div>
             <div style={{ marginTop: 20 }}><CheckoutButton /></div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 20, width: '100%' }}>
@@ -564,7 +568,7 @@ export default function Home() {
 
           <div className="checkout-box" style={{ maxWidth: 520, margin: '0 auto', padding: '40px 44px', borderRadius: 14, border: '2px solid rgba(99,71,160,0.25)', background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', textAlign: 'center' }}>
             <div className="price-old">Normally $309</div>
-            <p className="now-only" style={{ fontSize: 44, color: 'var(--ink)', fontWeight: 700, marginBottom: 8 }}>Now Only <span style={{ color: 'var(--gold)' }}>$47</span></p>
+            <p className="now-only" style={{ color: 'var(--ink)', fontWeight: 700, marginBottom: 8 }}>Now Only <span style={{ color: 'var(--gold)' }}>$47</span></p>
             <div className="price-note">One-time payment. Lifetime access.</div>
             <div style={{ marginTop: 20 }}><CheckoutButton /></div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 20, width: '100%' }}>
