@@ -65,7 +65,7 @@ export default function Home() {
         .hero-img { width: 100%; max-width: 860px; margin: 0 auto; border-radius: 12px; overflow: hidden; aspect-ratio: 16/9; background: var(--bg-warm); border: 1px solid var(--sand); display: flex; align-items: center; justify-content: center; }
         .hero-img-ph { text-align: center; padding: 36px; color: var(--ink-muted); font-size: 14px; line-height: 1.5; }
         .hero-img-ph .em { font-size: 48px; display: block; margin-bottom: 8px; }
-        .hero h1 .accent { background: linear-gradient(135deg, var(--green), var(--green-deep)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-style: italic; }
+        .hero h1 .accent { background: linear-gradient(135deg, #7b5ea7, #a855f7, #e879a8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-style: italic; }
         .hero-intro { font-size: clamp(0.75rem, 1.5vw, 0.85rem); color: var(--ink-muted); margin-bottom: 20px; font-style: normal; letter-spacing: 3px; font-weight: 700; text-transform: uppercase; background: transparent; display: inline-block; padding: 10px 24px; border-radius: 50px; border: 1px solid var(--sand); }
 
         /* Philosophy blocks */
@@ -199,6 +199,7 @@ export default function Home() {
           .stack-row .val { font-size: 15px !important; }
           .checkout-box { padding: 24px 20px !important; }
           .hero-intro { font-size: 0.7rem !important; letter-spacing: 2px !important; padding: 8px 16px !important; }
+          .hero { padding-top: 36px !important; }
         }
       `}} />
 
@@ -206,7 +207,7 @@ export default function Home() {
         <div className="container">
 
           {/* HERO */}
-          <section style={{ paddingTop: 72, paddingBottom: 48, textAlign: 'center' }}>
+          <section className="hero" style={{ paddingTop: 72, paddingBottom: 48, textAlign: 'center' }}>
             <p className="hero-intro">Even if you&apos;ve never painted before</p>
             <h1>Turn Any Old Jeans Into <span className="accent">Custom Painted Jeans</span> In a Weekend</h1>
             <p style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: 'var(--ink-muted)', marginTop: 8, maxWidth: 600, marginLeft: 'auto', marginRight: 'auto', fontStyle: 'italic' }}>Without needing years of practice or expensive supplies</p>
@@ -288,12 +289,14 @@ export default function Home() {
           {/* COURSE INTRO */}
           <section className="bonsai-center" style={{ padding: '80px 0 36px' }}>
             <h2 style={{ marginBottom: 4, fontSize: 'clamp(2.2rem, 5vw, 3.2rem)', fontWeight: 600 }}>Introducing: The Painted Jeans Masterclass</h2>
-
+            <div style={{ marginTop: 36, display: 'flex', justifyContent: 'center' }}>
+              <Image src="/hereswhatyouget.jpg" alt="Here's what you get" width={1200} height={800} style={{ width: '100%', maxWidth: 700, height: 'auto', borderRadius: 16, boxShadow: '0 12px 40px rgba(0,0,0,0.15)' }} />
+            </div>
           </section>
 
           {/* MODULES */}
           <section style={{ padding: '20px 0 40px' }}>
-            <h2 className="bonsai-center" style={{ marginBottom: 24 }}>✨ What&apos;s Inside ✨</h2>
+            <h2 className="bonsai-center" style={{ marginTop: 48, marginBottom: 48, fontSize: 'clamp(2rem, 5vw, 3rem)' }}>✨ What&apos;s Inside ✨</h2>
 
             <div className="modules-grid">
             <div className="module-card">
@@ -418,8 +421,8 @@ export default function Home() {
 
           {/* BONUSES */}
           <section style={{ padding: '36px 0' }}>
-            <p className="bonsai-center" style={{ color: 'var(--ink-muted)', marginBottom: 8 }}>But wait, there&apos;s more</p>
-            <h2 className="bonsai-center" style={{ marginBottom: 24 }}>Order today and you also get:</h2>
+            <h2 className="bonsai-center" style={{ marginBottom: 8 }}>You Also Get These</h2>
+            <p className="bonsai-center" style={{ color: 'var(--ink-muted)', marginBottom: 24 }}>Two bonus resources included with your access:</p>
 
             <div className="bonus-card">
               <div className="bonus-header"><div className="bonus-label">Bonus 1</div><div className="bonus-value">$37 value</div></div>
@@ -438,7 +441,7 @@ export default function Home() {
             </div>
 
             <div className="bonus-card">
-              <div className="bonus-header"><div className="bonus-label">Bonus 2</div><div className="bonus-value">$49 value</div></div>
+              <div className="bonus-header"><div className="bonus-label">Bonus 2</div><div className="bonus-value">$47 value</div></div>
               <h3>The Painted Jeans Business Blueprint</h3>
               <div className="bonus-desc">Turn your new skill into a side hustle or a full business.</div>
               <div className="bonus-body">
@@ -459,8 +462,8 @@ export default function Home() {
             <div className="stack-row stack-total"><span className="label">&#10003; 5 Core Modules</span><span className="val">$139</span></div>
 
             <div className="stack-row"><span className="label">&#10003; Aftercare &amp; Mistake-Fixing Guide</span><span className="val">$37</span></div>
-            <div className="stack-row"><span className="label">&#10003; The Painted Jeans Business Blueprint</span><span className="val">$49</span></div>
-            <div className="stack-row" style={{ borderBottom: 'none' }}><span className="label" style={{ fontWeight: 700, color: 'var(--ink)' }}>Total Value</span><span className="val" style={{ fontSize: 16 }}>$225</span></div>
+            <div className="stack-row"><span className="label">&#10003; The Painted Jeans Business Blueprint</span><span className="val">$47</span></div>
+            <div className="stack-row" style={{ borderBottom: 'none' }}><span className="label" style={{ fontWeight: 700, color: 'var(--ink)' }}>Total Value</span><span className="val" style={{ fontSize: 16 }}>$223</span></div>
           </section>
 
           <div className="checkout-box" style={{ maxWidth: 520, margin: '0 auto', padding: '40px 44px', borderRadius: 14, border: '2px solid rgba(99,71,160,0.25)', background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', textAlign: 'center' }}>
@@ -487,9 +490,9 @@ export default function Home() {
           <div className="bonsai-divider" />
 
           {/* MEGA BONUS */}
-          <section style={{ padding: '192px 0 64px' }}>
-            <p className="bonsai-center" style={{ color: 'var(--ink-muted)', marginBottom: 8 }}>One last thing...</p>
-            <h2 className="bonsai-center" style={{ marginBottom: 18 }}>Order today and you also get:</h2>
+          <section style={{ padding: '80px 0 64px' }}>
+            <p className="bonsai-center" style={{ color: 'var(--ink-muted)', marginBottom: 8 }}>ONE MORE THING...</p>
+            <h2 className="bonsai-center" style={{ marginBottom: 18 }}>Order now and you also get:</h2>
 
             <div className="bonus-card mega">
               <div className="bonus-header"><div className="bonus-label">Mega Bonus</div><div className="bonus-value">$67 value</div></div>
@@ -524,9 +527,9 @@ export default function Home() {
             <div className="stack-row stack-total"><span className="label">&#10003; 5 Core Modules</span><span className="val">$139</span></div>
 
             <div className="stack-row"><span className="label">&#10003; Aftercare &amp; Mistake-Fixing Guide</span><span className="val">$37</span></div>
-            <div className="stack-row"><span className="label">&#10003; The Painted Jeans Business Blueprint</span><span className="val">$49</span></div>
+            <div className="stack-row"><span className="label">&#10003; The Painted Jeans Business Blueprint</span><span className="val">$47</span></div>
             <div className="stack-row"><span className="label">&#10003; The Back Pocket Duo: Waves &amp; Rainbow</span><span className="val">$67</span></div>
-            <div className="stack-row" style={{ borderBottom: 'none' }}><span className="label" style={{ fontWeight: 700, color: 'var(--ink)' }}>Total Value</span><span className="val" style={{ fontSize: 16 }}>$292</span></div>
+            <div className="stack-row" style={{ borderBottom: 'none' }}><span className="label" style={{ fontWeight: 700, color: 'var(--ink)' }}>Total Value</span><span className="val" style={{ fontSize: 16 }}>$290</span></div>
           </section>
 
           <div className="checkout-box" style={{ maxWidth: 520, margin: '0 auto', padding: '40px 44px', borderRadius: 14, border: '2px solid rgba(99,71,160,0.25)', background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', textAlign: 'center' }}>
