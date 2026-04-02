@@ -38,13 +38,13 @@ export async function POST(request: Request) {
     const data = await res.json();
 
     if (data.status === 'COMPLETED') {
-      const customerEmail = data.payer?.email_address || 'hello@thebonsaipath.com';
+      const customerEmail = data.payer?.email_address || 'hello@katiepaintsjeans.com';
       const html = await render(OrderConfirmation({ customerEmail }));
 
       await resend.emails.send({
-        from: 'Kenji Murakami - Bonsai Path <hello@thebonsaipath.com>',
+        from: 'Katie - The Painted Jeans Masterclass <hello@katiepaintsjeans.com>',
         to: customerEmail,
-        replyTo: 'hello@thebonsaipath.com',
+        replyTo: 'hello@katiepaintsjeans.com',
         subject: 'About your course purchase — important update',
         html,
       });

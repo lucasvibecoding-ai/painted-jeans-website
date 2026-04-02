@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     q: 'Have a specific question?',
-    a: "Email us at hello@paintedjeans.com and we'll get back to you as soon as possible.",
+    a: "Email us at hello@katiepaintsjeans.com and we'll get back to you as soon as possible.",
   },
 ];
 

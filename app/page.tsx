@@ -411,7 +411,7 @@ export default function Home() {
             <h2>Try it risk-free</h2>
             <p><strong>You don&apos;t have to make the final decision now.</strong></p>
             <p>Get access to the full course. Grab your supplies. Practice on scrap denim. Paint your first real pair. Wear them out and count the compliments.</p>
-            <p>If you don&apos;t love it, email hello@paintedjeans.com within 90 days for a full refund. Within 24 hours. <strong>No questions asked.</strong></p>
+            <p>If you don&apos;t love it, email hello@katiepaintsjeans.com within 90 days for a full refund. Within 24 hours. <strong>No questions asked.</strong></p>
           </section>
 
           <div className="bonsai-divider" />

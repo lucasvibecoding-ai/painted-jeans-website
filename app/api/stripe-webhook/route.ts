@@ -40,14 +40,14 @@ export async function POST(request: Request) {
       customerEmail = charge.billing_details?.email || null;
     }
 
-    const toEmail = customerEmail || 'hello@paintedjeans.com';
+    const toEmail = customerEmail || 'hello@katiepaintsjeans.com';
     console.log(`Sending confirmation email to: ${toEmail} (receipt_email was: ${paymentIntent.receipt_email})`);
     const html = await render(OrderConfirmation({ customerEmail: toEmail }));
 
     await resend.emails.send({
-      from: 'Katie - The Painted Jeans Masterclass <hello@paintedjeans.com>',
+      from: 'Katie - The Painted Jeans Masterclass <hello@katiepaintsjeans.com>',
       to: toEmail,
-      replyTo: 'hello@paintedjeans.com',
+      replyTo: 'hello@katiepaintsjeans.com',
       subject: 'About your course purchase — important update',
       html,
     });

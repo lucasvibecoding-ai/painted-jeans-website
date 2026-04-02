@@ -99,8 +99,8 @@ export default function TermsPage() {
           <h2 className="text-2xl font-serif mb-3 text-cream">9. Contact</h2>
           <p>
             If you have any questions about these Terms, please contact us at{" "}
-            <a href="mailto:hello@paintedjeans.com" className="text-gold underline">
-              hello@paintedjeans.com
+            <a href="mailto:hello@katiepaintsjeans.com" className="text-gold underline">
+              hello@katiepaintsjeans.com
             </a>
           </p>
         </section>

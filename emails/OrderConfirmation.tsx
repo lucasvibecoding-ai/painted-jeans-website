@@ -72,7 +72,7 @@ export default function OrderConfirmation({ customerEmail }: OrderConfirmationPr
           </Text>
 
           <Text style={spamStep}>
-            <strong>2. Add me to your contacts.</strong> Save <strong>hello@paintedjeans.com</strong> as a contact and future emails will go straight to your inbox.
+            <strong>2. Add me to your contacts.</strong> Save <strong>hello@katiepaintsjeans.com</strong> as a contact and future emails will go straight to your inbox.
           </Text>
 
           <Text style={spamStep}>
