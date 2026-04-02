@@ -39,6 +39,14 @@ export default function Success() {
           <strong className="text-cream">lifetime access</strong> to The Painted Jeans Masterclass.
         </p>
 
+        <div className="rounded-xl p-6 sm:p-8 text-left space-y-4" style={{ background: '#fff8e6', border: '2px solid #e8d5a0', borderRadius: 12 }}>
+          <p className="text-base sm:text-lg" style={{ color: '#1a2e1a', margin: 0 }}>
+            <strong style={{ fontSize: '1.1em' }}>📬 Check your spam/junk folder!</strong>
+            <br />
+            <span style={{ color: '#7d7568' }}>Our confirmation email sometimes lands there. If you find it, mark it as &quot;Not spam&quot; so you don&apos;t miss future emails.</span>
+          </p>
+        </div>
+
         <div className="rounded-xl p-6 sm:p-8 text-left space-y-4 shadow-sm" style={{ background: '#f8f5f0', border: '1px solid rgba(58,99,71,0.15)' }}>
           <h2 className="text-xl font-serif font-bold text-cream">
             What happens next:
@@ -60,7 +68,7 @@ export default function Success() {
         </div>
 
         <p className="text-sm" style={{ color: 'rgba(125,117,104,0.6)' }}>
-          Didn&apos;t get the email? Check your spam folder or contact us at{" "}
+          Still can&apos;t find it? Contact us at{" "}
           <a href="mailto:hello@katiepaintsjeans.com" className="text-gold underline">
             hello@katiepaintsjeans.com
           </a>
