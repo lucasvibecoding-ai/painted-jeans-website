@@ -107,7 +107,7 @@ export default function Home() {
         .price-old { font-size: 26px; color: var(--ink-muted); text-decoration: line-through; margin-bottom: 4px; }
         .now-only { font-size: 44px; }
         .price { font-size: 56px; color: var(--green-deep); margin-bottom: 4px; font-weight: 700; }
-        .price-note { font-size: 16px; color: var(--ink-muted); margin-bottom: 24px; font-weight: 400; }
+        .price-note { font-size: 20px; color: var(--ink-muted); margin-bottom: 24px; font-weight: 400; }
         .guarantee-badge { display: flex; align-items: center; gap: 10px; justify-content: center; margin-top: 20px; font-size: 15px; color: var(--ink-muted); }
         .guarantee-icon { width: 40px; height: 40px; border-radius: 50%; background: var(--cream); border: 1.5px solid var(--gold); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
         .payment-icons { display: flex; gap: 6px; justify-content: center; margin-top: 14px; opacity: 0.4; }
@@ -399,7 +399,7 @@ export default function Home() {
             <div className="checkout-box" style={{ maxWidth: 520, margin: '0 auto', padding: '40px 44px', borderRadius: 14, border: '2px solid rgba(99,71,160,0.25)', background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', textAlign: 'center' }}>
               <div className="price-old">Normally $97</div>
               <p id="get-access" className="now-only" style={{ color: 'var(--ink)', fontWeight: 700, marginBottom: 8 }}>Now Only <span style={{ color: 'var(--gold)' }}>$47</span></p>
-              <div className="price-note">One-time payment. Lifetime access.</div>
+              <div className="price-note" style={{ fontWeight: 600 }}>One-time payment.<br />Lifetime access.</div>
               <div style={{ marginTop: 20 }}><CheckoutButton /></div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 20, width: '100%' }}>
                 <div style={{ flex: 1, height: 1, background: 'rgba(0,0,0,0.1)' }} />
@@ -499,7 +499,7 @@ export default function Home() {
           <div className="checkout-box" style={{ maxWidth: 520, margin: '0 auto', padding: '40px 44px', borderRadius: 14, border: '2px solid rgba(99,71,160,0.25)', background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', textAlign: 'center' }}>
             <div className="price-old">Normally $242</div>
             <p className="now-only" style={{ color: 'var(--ink)', fontWeight: 700, marginBottom: 8 }}>Now Only <span style={{ color: 'var(--gold)' }}>$47</span></p>
-            <div className="price-note">One-time payment. Lifetime access.</div>
+            <div className="price-note" style={{ fontWeight: 600 }}>One-time payment.<br />Lifetime access.</div>
             <div style={{ marginTop: 20 }}><CheckoutButton /></div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 20, width: '100%' }}>
               <div style={{ flex: 1, height: 1, background: 'rgba(0,0,0,0.1)' }} />
@@ -569,7 +569,7 @@ export default function Home() {
           <div className="checkout-box" style={{ maxWidth: 520, margin: '0 auto', padding: '40px 44px', borderRadius: 14, border: '2px solid rgba(99,71,160,0.25)', background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', textAlign: 'center' }}>
             <div className="price-old">Normally $309</div>
             <p className="now-only" style={{ color: 'var(--ink)', fontWeight: 700, marginBottom: 8 }}>Now Only <span style={{ color: 'var(--gold)' }}>$47</span></p>
-            <div className="price-note">One-time payment. Lifetime access.</div>
+            <div className="price-note" style={{ fontWeight: 600 }}>One-time payment.<br />Lifetime access.</div>
             <div style={{ marginTop: 20 }}><CheckoutButton /></div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 20, width: '100%' }}>
               <div style={{ flex: 1, height: 1, background: 'rgba(0,0,0,0.1)' }} />
