@@ -36,10 +36,6 @@ const faqs = [
     a: "Yes. The Mistake-Fixing Toolkit bonus covers every common mistake with step-by-step fixes. Paint bleeding? Fixable. Wrong color? Layer over it. And since you practice on scrap denim first in Module 1, you'll have confidence before touching your real jeans.",
   },
   {
-    q: 'Can I actually sell painted jeans?',
-    a: "Absolutely. Custom painted jeans sell for $150-400+ on Instagram and Etsy. Module 5 and the Mega Bonus cover pricing, photographing your work, setting up an Etsy shop, taking commissions, and building a following. Some students earn $500/month as a side hustle.",
-  },
-  {
     q: "What's the refund policy?",
     a: "90-day money-back guarantee. Try the entire course. Paint your first pair. If you don't love it, email us within 90 days and we'll refund you in full. No questions asked. No hoops.",
   },
@@ -69,7 +65,6 @@ export default function FaqAccordion() {
             onClick={() => setOpenIndex(openIndex === i ? null : i)}
             type="button"
           >
-            <span className="faq-badge">Q</span>
             <span className="faq-q-text">{faq.q}</span>
             <span className={`faq-icon ${openIndex === i ? 'open' : ''}`}>+</span>
           </button>

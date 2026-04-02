@@ -389,11 +389,15 @@ export default function CheckoutClient() {
               <span className="item-price">$47.00</span>
             </div>
             <div className="line-item">
-              <span className="item-name">Aftercare &amp; Mistake-Fixing Guide</span>
+              <span className="item-name">The Jeans Care &amp; Longevity Guide</span>
               <span className="item-price">FREE</span>
             </div>
             <div className="line-item">
               <span className="item-name">The Painted Jeans Business Blueprint</span>
+              <span className="item-price">FREE</span>
+            </div>
+            <div className="line-item">
+              <span className="item-name">Color Palettes of the 10 Most Famous Artists</span>
               <span className="item-price">FREE</span>
             </div>
             <div className="line-item">

@@ -3,6 +3,7 @@ import Image from "next/image";
 import CheckoutButton from "./CheckoutButton";
 import CountdownBar from "./CountdownBar";
 import FaqAccordion from "./FaqAccordion";
+import MegaBonusBadge from "./MegaBonusBadge";
 
 export const metadata: Metadata = {
   title: "Painted Jeans: Turn Any Old Jeans Into Custom Wearable Art — In a Weekend",
@@ -45,7 +46,7 @@ export default function Home() {
         .bonsai-page h1, .bonsai-page h2, .bonsai-page h3 { font-family: 'Lora', serif; color: var(--ink); line-height: 1.25; }
         .bonsai-page h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); font-weight: 600; letter-spacing: -0.5px; text-align: center; margin-bottom: 20px; }
         .bonsai-page h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 500; margin-bottom: 24px; }
-        .bonsai-page h3 { font-size: 1.4rem; font-weight: 600; color: var(--green-deep); margin-bottom: 8px; }
+        .bonsai-page h3 { font-size: 30px; font-weight: 600; color: var(--green-deep); margin-bottom: 8px; }
 
         /* Body text */
         .bonsai-page p { margin-bottom: 24px; }
@@ -65,8 +66,9 @@ export default function Home() {
         .hero-img { width: 100%; max-width: 860px; margin: 0 auto; border-radius: 12px; overflow: hidden; aspect-ratio: 16/9; background: var(--bg-warm); border: 1px solid var(--sand); display: flex; align-items: center; justify-content: center; }
         .hero-img-ph { text-align: center; padding: 36px; color: var(--ink-muted); font-size: 14px; line-height: 1.5; }
         .hero-img-ph .em { font-size: 48px; display: block; margin-bottom: 8px; }
-        .hero h1 .accent { background: linear-gradient(135deg, #7b5ea7, #a855f7, #e879a8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-style: italic; }
-        .hero-intro { font-size: clamp(0.75rem, 1.5vw, 0.85rem); color: var(--ink-muted); margin-bottom: 20px; font-style: normal; letter-spacing: 3px; font-weight: 700; text-transform: uppercase; background: transparent; display: inline-block; padding: 10px 24px; border-radius: 50px; border: 1px solid var(--sand); }
+        .hero h1 .accent { background: linear-gradient(135deg, #b8860b, #d4a843, #8b6914); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero-intro { font-size: clamp(0.75rem, 1.5vw, 0.85rem); color: var(--ink-muted); margin-bottom: 20px; font-style: normal; letter-spacing: 3px; font-weight: 700; text-transform: uppercase; }
+        .gradient-pick { font-size: clamp(1.8rem, 5vw, 2.8rem); font-family: 'Lora', serif; font-weight: 600; font-style: italic; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; padding: 0 4px; }
 
         /* Philosophy blocks */
         .phil-block { margin-bottom: 32px; padding: 28px 32px; background: var(--card); border-radius: 12px; border: 1px solid var(--sand); }
@@ -93,11 +95,11 @@ export default function Home() {
         /* Module cards — 2-col grid */
         .modules-grid { display: flex; flex-direction: column; gap: 16px; }
         .module-card { background: var(--card); border-radius: 12px; padding: 28px; border: 1px solid var(--sand); margin-bottom: 0; }
-        .module-label { font-size: 12px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: var(--green); margin-bottom: 6px; }
-        .module-sub { font-size: 16px; color: var(--ink-muted); margin-bottom: 14px; }
+        .module-label { font-size: 12px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+        .module-sub { font-size: 18px; color: var(--ink); margin-bottom: 14px; }
         .module-body { display: flex; gap: 28px; align-items: flex-start; }
         .module-card ul { list-style: none; padding: 0; flex: 1; }
-        .module-card li { padding: 6px 0; font-size: 15px; line-height: 1.6; }
+        .module-card li { padding: 6px 0; font-size: 18px; line-height: 1.6; }
         .module-img { width: 280px; min-width: 280px; height: 260px; border-radius: 8px; background: linear-gradient(135deg, var(--bg-warm), var(--sand)); display: flex; align-items: center; justify-content: center; font-size: 28px; border: 1px solid var(--sand); overflow: hidden; position: relative; }
 
         /* CTA */
@@ -112,8 +114,8 @@ export default function Home() {
         .ps-note { margin-top: 16px; font-size: 18px; color: var(--ink-muted); font-style: italic; }
 
         /* Guarantee section */
-        .guarantee-section { padding: 48px 0; text-align: center; }
-        .guarantee-section p { max-width: 640px; margin: 0 auto 16px; }
+        .guarantee-section { padding: 48px 0; text-align: left; }
+        .guarantee-section p { max-width: 640px; margin: 0 auto 16px; font-size: 20px; }
 
         /* Bonus cards */
         .bonus-card { background: var(--card); border-radius: 12px; padding: 28px; margin-bottom: 16px; border: 1px solid var(--sand); }
@@ -123,10 +125,11 @@ export default function Home() {
         .bonus-header { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
         .bonus-label { font-size: 12px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); }
         .bonus-value { font-size: 12px; color: var(--green); font-weight: 700; background: rgba(99,71,160,0.1); padding: 2px 10px; border-radius: 100px; letter-spacing: 0.5px; }
-        .bonus-card h3 { font-size: 1.3rem; color: var(--ink); margin-bottom: 4px; }
+        .bonus-card h3 { font-size: 1.3rem; color: var(--gold); margin-bottom: 4px; }
+        .module-card h3 { color: var(--gold); }
         .bonus-desc { font-size: 18px; color: var(--ink-muted); margin-bottom: 14px; }
         .bonus-card ul { list-style: none; padding: 0; }
-        .bonus-card li { padding: 6px 0; font-size: 15px; line-height: 1.6; }
+        .bonus-card li { padding: 6px 0; font-size: 18px; line-height: 1.6; }
         .mega { border-color: rgba(176,141,58,0.3); background: linear-gradient(135deg, var(--card), var(--gold-pale)); }
 
         /* Stack */
@@ -167,15 +170,15 @@ export default function Home() {
         .split-img-ph .em { font-size: 42px; display: block; margin-bottom: 8px; }
 
         @media (max-width: 768px) {
-          .bonsai-page .container { padding: 0 20px; }
+          .bonsai-page .container { padding: 0 24px; }
           .bonsai-page section { padding-left: 20px; padding-right: 20px; }
           .split { flex-direction: column; gap: 24px; }
           .split-img { flex: none; width: 100%; height: auto; }
           .split-text { flex: 1 !important; }
           .module-body { flex-direction: column; }
-          .module-img { width: 100%; min-width: unset; height: 200px; }
+          .module-img { width: 100%; min-width: unset; height: auto; aspect-ratio: 1/1; }
           .bonus-body { flex-direction: column; }
-          .bonus-img { width: 100%; min-width: unset; height: 200px; }
+          .bonus-img { width: 100%; min-width: unset; height: auto; aspect-ratio: 1/1; }
           .module-card, .bonus-card { padding: 20px; }
           .instructor { flex-direction: column; text-align: center; align-items: center; }
           .instructor-img { width: 100% !important; max-width: 400px !important; height: auto !important; }
@@ -185,20 +188,24 @@ export default function Home() {
           .bonus-header { flex-wrap: wrap; }
         }
         @media (max-width: 480px) {
-          .bonsai-page .container { padding: 0 16px; }
-          .bonsai-page { font-size: 16px; }
-          .module-img, .bonus-img { height: 160px; }
+          .bonsai-page .container { padding: 0 24px; }
+          .bonsai-page { font-size: 18px; }
+          .bonsai-page p:not(.hero-intro), .bonsai-page li { font-size: 18px !important; }
+          .module-img, .bonus-img { height: auto; aspect-ratio: 1/1; }
           .badge { font-size: 10px; letter-spacing: 1.5px; padding: 5px 12px; }
           .payment-method-btn { font-size: 13px; padding: 10px 12px; }
-          #hero { width: 100% !important; margin-top: 16px; }
+          #hero { width: 100% !important; margin-top: 8px; max-width: 100% !important; margin-left: -16px !important; margin-right: -16px !important; width: calc(100% + 32px) !important; border-radius: 8px !important; }
+          .imagine-section { padding-top: 24px !important; }
+          .imagine-section h2 { font-size: 30px !important; }
           .now-only { font-size: 32px !important; }
           .cta-btn { font-size: 1.5rem !important; }
-          .faq-q-text { font-weight: 500 !important; font-size: 16px !important; }
-          .faq-q { font-size: 16px !important; }
-          .stack-row { padding: 6px 0 !important; font-size: 15px; }
-          .stack-row .val { font-size: 15px !important; }
+          .faq-q-text { font-weight: 500 !important; font-size: 18px !important; }
+          .faq-q { font-size: 18px !important; }
+          .stack-row { padding: 6px 0 !important; font-size: 18px; }
+          .stack-row .val { font-size: 18px !important; }
           .checkout-box { padding: 24px 20px !important; }
-          .hero-intro { font-size: 0.7rem !important; letter-spacing: 2px !important; padding: 8px 16px !important; }
+          .hero-intro { font-size: 14px !important; letter-spacing: 2px !important; font-weight: 400 !important; }
+          .hero h1 { font-size: clamp(2rem, 7vw, 2.6rem) !important; line-height: 1.35 !important; }
           .hero { padding-top: 36px !important; }
         }
       `}} />
@@ -217,39 +224,47 @@ export default function Home() {
             </div>
           </section>
 
-          <div className="bonsai-divider" />
-
           {/* THE PROBLEM */}
-          <section style={{ padding: '56px 0' }}>
+          <section className="imagine-section" style={{ padding: '56px 0' }}>
             <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'left' }}>
-              <h2 style={{ textAlign: 'center', marginBottom: 64 }}>Clothes that actually feel like YOU.</h2>
-              <p>You see incredible hand-painted jeans online and think: &quot;I could never make that.&quot;</p>
-              <p>So you buy the same mass-produced stuff everyone else wears.</p>
-              <p>But deep down, you want something you made with your own hands.</p>
-              <p>Something that makes people ask: <strong>&quot;Wait... where did you get those?&quot;</strong></p>
-              <p style={{ marginBottom: 80 }}>And you get to say: <strong>&quot;I painted them myself.&quot;</strong></p>
-            </div>
-          </section>
+              <h2 style={{ textAlign: 'left', marginBottom: 30 }}>Imagine if you could:</h2>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                <p><span style={{ color: '#c75a3a' }}>&rarr;</span> <strong style={{ color: '#c75a3a' }}>Make clothes that actually feel like you.</strong> Not mass-produced. Not someone else&apos;s design. Something you made with your own hands that makes people ask: &quot;Wait... where did you get those?&quot;</p>
+                <p><span style={{ color: '#2a8a7a' }}>&rarr;</span> <strong style={{ color: '#2a8a7a' }}>Stand out from the crowd</strong> without even trying. Walk into a room and have someone grab your arm mid-conversation. &quot;Wait. Did you paint those?&quot; And you just nod like it&apos;s no big deal.</p>
+                <p><span style={{ color: '#c78a2a' }}>&rarr;</span> Sit down after a long day, feel the brush gliding across the denim, and <strong style={{ color: '#c78a2a' }}>lose yourself in a quiet evening</strong> with nowhere to be.</p>
+                <p><span style={{ color: '#7a4aad' }}>&rarr;</span> <strong style={{ color: '#7a4aad' }}>Hand a pair to someone you love,</strong> watch them hold them up, run their fingers over the paint, look up at you, and go quiet for a second before they can say a word.</p>
+              </div>
 
-          {/* BUT HERE'S WHAT REALLY HOLDS YOU BACK */}
-          <section style={{ padding: '0 0 56px' }}>
-            <h2 className="bonsai-center" style={{ marginBottom: 64 }}>This will be your most complimented pair.</h2>
-            <div style={{ maxWidth: 760, margin: '0 auto' }}>
+
+              <div style={{ marginTop: 96 }}>
+                <h2 style={{ textAlign: 'left', marginBottom: 56 }}>This will be your most complimented pair.</h2>
                 <p>You walk into a coffee shop and someone taps your shoulder. &quot;Wait, where are those from?&quot;</p>
                 <p>You post a photo and the comments won&apos;t stop.</p>
                 <p>Friends start texting you asking if you can make them a pair.</p>
                 <p>Not because you tried to stand out. <strong>Because you made something real.</strong></p>
                 <p>That forgotten pair collecting dust in the back of your closet? <strong>It&apos;s about to become the most complimented thing you own.</strong></p>
+              </div>
+            </div>
+          </section>
+
+          {/* ISN'T THIS EXPENSIVE */}
+          <section style={{ padding: '48px 0' }}>
+            <div style={{ maxWidth: 760, margin: '0 auto' }}>
+            <h2 style={{ textAlign: 'left', marginBottom: 64 }}>&quot;Isn&apos;t this expensive to get into?&quot;</h2>
+              <p><strong>Your first pair costs less than a coffee habit.</strong></p>
+              <p>Fabric paint is $8-12. A brush set costs under $10. Fabric medium is $5.</p>
+              <p><strong>That&apos;s it.</strong> No airbrush machine. No heat press. No fancy studio.</p>
+              <p>The course teaches you <strong>exactly which supplies to buy</strong> and which ones are a waste of money.</p>
             </div>
           </section>
 
           {/* ANYONE CAN LEARN */}
           <section style={{ padding: '48px 0' }}>
-            <h2 className="bonsai-center" style={{ marginBottom: 64 }}>Anyone can paint jeans.</h2>
             <div style={{ maxWidth: 760, margin: '0 auto' }}>
+            <h2 style={{ textAlign: 'left', marginBottom: 64 }}>Anyone can paint jeans.</h2>
               <p><span style={{ color: '#c75a3a', fontWeight: 600 }}>&rarr; Even if you can&apos;t draw a straight line.</span> You don&apos;t need to. The techniques in this course use stencils, transfers, and simple brushwork that look incredible without any drawing ability.</p>
               <p><span style={{ color: '#2a8a7a', fontWeight: 600 }}>&rarr; Even if you think you&apos;re &quot;not creative.&quot;</span> Creativity isn&apos;t talent. It&apos;s a set of techniques. Follow the steps, and your jeans will look like a professional painted them.</p>
-              <p><span style={{ color: '#c78a2a', fontWeight: 600 }}>&rarr; Even if you&apos;re scared of ruining your jeans.</span> Module 1 teaches you to practice on scrap denim first. By the time you touch your real pair, you&apos;ll be confident.</p>
+              <p><span style={{ color: '#c78a2a', fontWeight: 600 }}>&rarr; Even if you&apos;re scared of ruining your jeans.</span> You&apos;ll practice on scrap denim first. By the time you touch your real pair, you&apos;ll be confident.</p>
               <p><span style={{ color: '#7a4aad', fontWeight: 600 }}>&rarr; Even if you&apos;ve never held a paintbrush.</span> You need a pair of jeans, some fabric paint, and a few brushes. Total cost: under $25. That&apos;s it.</p>
             </div>
           </section>
@@ -263,26 +278,16 @@ export default function Home() {
             </div>
             <div className="instructor-text">
               <h2>Hi, I&apos;m Katie!</h2>
-              <p>I&apos;ve painted over 200 pairs of jeans.</p>
-              <p>What started as a weekend experiment turned into an obsession. Then a business. Then a course.</p>
-              <p>I&apos;ve sold custom painted jeans for $150-400 a pair. I&apos;ve painted for friends, for strangers on Instagram, and for my own closet.</p>
-              <p>But the best part wasn&apos;t selling them.</p>
-              <p>It was watching someone pick up a brush for the first time and realize: <strong>&quot;Holy cow, I can actually do this.&quot;</strong></p>
+              <p>I&apos;ve painted over <strong>200 jeans</strong>.</p>
+              <p>It all started with one old pair I was about to throw away. I was tired of buying the same <strong>fast fashion</strong> everyone else wears. So I grabbed some paint and <strong>made something with my own hands.</strong></p>
+              <p>That one pair changed everything.</p>
+              <p>Then friends started asking me to make them a pair. Then their friends. Then people I&apos;d never met. <strong>I couldn&apos;t keep up</strong> with all the requests.</p>
+              <p>So I thought: what if I just <strong>taught people how to do it themselves?</strong></p>
+              <p><strong>That&apos;s why I made this course.</strong></p>
             </div>
           </section>
 
           </div></div>{/* close container and bonsai-page */}
-          <section className="bonsai-page" style={{ background: '#f2efe8', padding: '80px 0 64px' }}>
-            <div style={{ maxWidth: 1080, margin: '0 auto', padding: '0 40px' }}>
-            <div>
-              <h2 style={{ marginBottom: 44, textAlign: 'center' }}>&quot;Isn&apos;t this expensive to get into?&quot;</h2>
-              <p><strong>Your first pair costs less than a coffee habit.</strong></p>
-              <p>Fabric paint is <strong>$8-12</strong>. A brush set costs <strong>under $10.</strong> Fabric medium is <strong>$5.</strong></p>
-              <p>That&apos;s it. No airbrush machine. No heat press. No fancy studio.</p>
-              <p>The course teaches you exactly <strong>which supplies to buy</strong> and which ones are a waste of money.</p>
-            </div>
-            </div>
-          </section>
 
           <div className="bonsai-page"><div className="container">
 
@@ -380,29 +385,35 @@ export default function Home() {
           {/* CTA after modules */}
           <section style={{ padding: '56px 0' }}>
             <div className="bonsai-center" style={{ marginBottom: 32 }}>
-              <p style={{ maxWidth: 600, margin: '0 auto 20px' }}>Five modules. A complete system for painting jeans that look professional and last forever, even if you&apos;ve never picked up a paintbrush.</p>
-              <p>The full price for this course is <strong>$139</strong>.</p>
-              <p style={{ maxWidth: 560, margin: '0 auto 20px' }}>You&apos;re not going to pay that today. This is the first time I&apos;ve offered this course publicly. I want <strong>the first 50 people</strong> to go through it, paint their first pair, and share their results.</p>
+              <p style={{ maxWidth: 720, textAlign: 'left', fontSize: 24, margin: '0 auto 20px' }}>You&apos;ve seen what&apos;s inside. Five modules. A complete system for painting custom jeans from a blank pair of denim.</p>
+              <p style={{ maxWidth: 720, textAlign: 'left', fontSize: 24, margin: '0 auto 20px' }}>The full price for this course is <strong><s>$97</s></strong>.</p>
+              <p style={{ maxWidth: 720, textAlign: 'left', fontSize: 24, margin: '0 auto 20px' }}>You&apos;re not going to pay that today. And the reason is simple.</p>
+              <p style={{ maxWidth: 720, textAlign: 'left', fontSize: 24, margin: '0 auto 20px' }}>This is the first time I&apos;ve offered this course to the public. I want <strong>50 people</strong> to go through it. I want to read your emails, answer your questions, see where you get stuck and where you surprise yourself.</p>
+              <p style={{ maxWidth: 720, textAlign: 'left', fontSize: 24, margin: '0 auto 20px' }}>That feedback is worth more to me right now than charging full price. Honestly, I also need to find out if I can handle 50 support inboxes without forgetting to eat.</p>
+              <p style={{ maxWidth: 720, textAlign: 'left', fontSize: 24, margin: '0 auto 20px' }}>So for this first group, the price is <strong>dramatically lower</strong>. Once those 50 spots fill, this page comes down and the full price goes live.</p>
             </div>
             <div className="checkout-box" style={{ maxWidth: 520, margin: '0 auto', padding: '40px 44px', borderRadius: 14, border: '2px solid rgba(99,71,160,0.25)', background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', textAlign: 'center' }}>
-              <div className="price-old">Normally $139</div>
+              <div className="price-old">Normally $97</div>
               <p id="get-access" className="now-only" style={{ fontSize: 44, color: 'var(--ink)', fontWeight: 700, marginBottom: 8 }}>Now Only <span style={{ color: 'var(--gold)' }}>$47</span></p>
               <div className="price-note">One-time payment. Lifetime access.</div>
               <div style={{ marginTop: 20 }}><CheckoutButton /></div>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginTop: 20 }}>
-                <Image src="/guarantee1.webp" alt="90-Day Money Back Guarantee" width={52} height={52} style={{ width: 48, height: 48, flexShrink: 0 }} />
-                <p style={{ margin: 0, fontWeight: 500 }}>90-Day Money Back Guarantee</p>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 20, width: '100%' }}>
+                <div style={{ flex: 1, height: 1, background: 'rgba(0,0,0,0.1)' }} />
+                <p style={{ margin: 0, fontWeight: 500, color: 'rgba(26,46,26,0.7)', whiteSpace: 'nowrap' }}>90-Day Money-Back Guarantee</p>
+                <div style={{ flex: 1, height: 1, background: 'rgba(0,0,0,0.1)' }} />
               </div>
-              <div style={{ width: 48, height: 1, background: 'rgba(0,0,0,0.1)', margin: '20px auto' }} />
-              <p style={{ color: 'var(--ink-muted)', marginBottom: 12 }}>🔒 Secure payment with Stripe 🔒</p>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16 }}>
-                <Image src="/visa.svg" alt="Visa" width={40} height={26} style={{ height: 26, width: 'auto' }} />
-                <Image src="/mastercard.svg" alt="Mastercard" width={40} height={26} style={{ height: 26, width: 'auto' }} />
-                <Image src="/american-express.svg" alt="Amex" width={40} height={26} style={{ height: 26, width: 'auto' }} />
-                <Image src="/discover.svg" alt="Discover" width={40} height={26} style={{ height: 26, width: 'auto' }} />
-                <Image src="/paypal.svg" alt="PayPal" width={40} height={26} style={{ height: 26, width: 'auto' }} />
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, marginTop: 16 }}>
+                <p style={{ color: 'var(--ink-muted)', marginBottom: 4, letterSpacing: '0.05em' }}>🔒 Secure Payment 🔒</p>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16 }}>
+                  <Image src="/visa.svg" alt="Visa" width={40} height={26} style={{ height: 26, width: 'auto' }} />
+                  <Image src="/mastercard.svg" alt="Mastercard" width={40} height={26} style={{ height: 26, width: 'auto' }} />
+                  <Image src="/american-express.svg" alt="Amex" width={40} height={26} style={{ height: 26, width: 'auto' }} />
+                  <Image src="/discover.svg" alt="Discover" width={40} height={26} style={{ height: 26, width: 'auto' }} />
+                  <Image src="/paypal.svg" alt="PayPal" width={40} height={26} style={{ height: 26, width: 'auto' }} />
+                </div>
               </div>
-              <p className="ps-note">P.S. If the next page doesn&apos;t load... I&apos;m sorry, but the deal has ended!</p>
+              <div style={{ width: 56, height: 1, background: 'rgba(0,0,0,0.1)', margin: '16px auto 0' }} />
+              <p className="ps-note" style={{ fontStyle: 'italic' }}>P.S. If the next page doesn&apos;t load... I&apos;m sorry, but the deal has ended!</p>
             </div>
           </section>
 
@@ -410,8 +421,8 @@ export default function Home() {
 
           {/* GUARANTEE */}
           <section className="guarantee-section">
-            <Image src="/guarantee1.webp" alt="90-Day Money Back Guarantee" width={160} height={160} style={{ width: 130, height: 130, marginBottom: 16, margin: '0 auto 16px' }} />
-            <h2>Try it risk-free</h2>
+            <Image src="/guarantee1.webp" alt="90-Day Money Back Guarantee" width={160} height={160} style={{ width: 130, height: 130, marginBottom: 16, margin: '0 auto 16px', display: 'block' }} />
+            <h2 style={{ textAlign: 'center' }}>Try it risk-free</h2>
             <p><strong>You don&apos;t have to make the final decision now.</strong></p>
             <p>Get access to the full course. Grab your supplies. Practice on scrap denim. Paint your first real pair. Wear them out and count the compliments.</p>
             <p>If you don&apos;t love it, email hello@katiepaintsjeans.com within 90 days for a full refund. Within 24 hours. <strong>No questions asked.</strong></p>
@@ -422,14 +433,14 @@ export default function Home() {
           {/* BONUSES */}
           <section style={{ padding: '36px 0' }}>
             <h2 className="bonsai-center" style={{ marginBottom: 8 }}>You Also Get These</h2>
-            <p className="bonsai-center" style={{ color: 'var(--ink-muted)', marginBottom: 24 }}>Two bonus resources included with your access:</p>
+            <p className="bonsai-center" style={{ color: 'var(--ink-muted)', marginBottom: 24, fontSize: 20 }}>Three bonus resources included with your access:</p>
 
             <div className="bonus-card">
               <div className="bonus-header"><div className="bonus-label">Bonus 1</div><div className="bonus-value">$37 value</div></div>
-              <h3>The Aftercare &amp; Mistake-Fixing Guide</h3>
+              <h3>The Jeans Care &amp; Longevity Guide</h3>
               <div className="bonus-desc">How to keep your jeans looking fresh. And how to fix it when things go wrong.</div>
               <div className="bonus-body">
-                <div className="bonus-img"><Image src="/BONUS1_NEW.webp" alt="Aftercare & Mistake-Fixing Guide" fill style={{ objectFit: 'cover' }} /></div>
+                <div className="bonus-img"><Image src="/BONUS1_NEW.webp" alt="The Jeans Care & Longevity Guide" fill style={{ objectFit: 'cover' }} /></div>
                 <ul>
                   <li>&#10022; <strong>The exact washing method</strong> that keeps your design vibrant. Temperature, cycle, and drying settings</li>
                   <li>&#10022; <strong>Heat-setting techniques</strong> that lock paint into the fabric permanently</li>
@@ -454,6 +465,20 @@ export default function Home() {
                 </ul>
               </div>
             </div>
+
+            <div className="bonus-card">
+              <div className="bonus-header"><div className="bonus-label">Bonus 3</div><div className="bonus-value">$19 value</div></div>
+              <h3>Color Palettes of the 10 Most Famous Artists</h3>
+              <div className="bonus-desc">The exact color palettes of 10 celebrated artists, translated into fabric paint colors you can use today.</div>
+              <div className="bonus-body">
+                <div className="bonus-img"><Image src="/BONUS3.jpg" alt="Color Palettes of the 10 Most Famous Artists" fill style={{ objectFit: 'cover' }} /></div>
+                <ul>
+                  <li>&#10022; <strong>Palettes decoded from Picasso, Da Vinci, Monet, Van Gogh and 6 more,</strong> each mapped to specific fabric paint shades</li>
+                  <li>&#10022; <strong>One page per artist:</strong> their signature palette, why it works, and a jeans design painted using only their colors</li>
+                  <li>&#10022; <strong>Pick an artist each week,</strong> grab those paints, and paint a pair in their style. The most fun creative challenge you&apos;ll do with this course.</li>
+                </ul>
+              </div>
+            </div>
           </section>
 
           {/* FIRST STACK + CTA */}
@@ -461,45 +486,49 @@ export default function Home() {
             <h2 className="bonsai-center" style={{ marginBottom: 18 }}>Here&apos;s everything you get:</h2>
             <div className="stack-row stack-total"><span className="label">&#10003; 5 Core Modules</span><span className="val">$139</span></div>
 
-            <div className="stack-row"><span className="label">&#10003; Aftercare &amp; Mistake-Fixing Guide</span><span className="val">$37</span></div>
+            <div className="stack-row"><span className="label">&#10003; The Jeans Care &amp; Longevity Guide</span><span className="val">$37</span></div>
             <div className="stack-row"><span className="label">&#10003; The Painted Jeans Business Blueprint</span><span className="val">$47</span></div>
-            <div className="stack-row" style={{ borderBottom: 'none' }}><span className="label" style={{ fontWeight: 700, color: 'var(--ink)' }}>Total Value</span><span className="val" style={{ fontSize: 16 }}>$223</span></div>
+            <div className="stack-row"><span className="label">&#10003; Color Palettes of the 10 Most Famous Artists</span><span className="val">$19</span></div>
+            <div className="stack-row" style={{ borderBottom: 'none' }}><span className="label" style={{ fontWeight: 700, color: 'var(--ink)' }}>Total Value</span><span className="val" style={{ fontSize: 16 }}>$242</span></div>
           </section>
 
           <div className="checkout-box" style={{ maxWidth: 520, margin: '0 auto', padding: '40px 44px', borderRadius: 14, border: '2px solid rgba(99,71,160,0.25)', background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', textAlign: 'center' }}>
-            <div className="price-old">Normally $225</div>
+            <div className="price-old">Normally $242</div>
             <p className="now-only" style={{ fontSize: 44, color: 'var(--ink)', fontWeight: 700, marginBottom: 8 }}>Now Only <span style={{ color: 'var(--gold)' }}>$47</span></p>
             <div className="price-note">One-time payment. Lifetime access.</div>
             <div style={{ marginTop: 20 }}><CheckoutButton /></div>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginTop: 20 }}>
-              <Image src="/guarantee1.webp" alt="90-Day Money Back Guarantee" width={52} height={52} style={{ width: 48, height: 48, flexShrink: 0 }} />
-              <p style={{ margin: 0, fontWeight: 500 }}>90-Day Money Back Guarantee</p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 20, width: '100%' }}>
+              <div style={{ flex: 1, height: 1, background: 'rgba(0,0,0,0.1)' }} />
+              <p style={{ margin: 0, fontWeight: 500, color: 'rgba(26,46,26,0.7)', whiteSpace: 'nowrap' }}>90-Day Money-Back Guarantee</p>
+              <div style={{ flex: 1, height: 1, background: 'rgba(0,0,0,0.1)' }} />
             </div>
-            <div style={{ width: 48, height: 1, background: 'rgba(0,0,0,0.1)', margin: '20px auto' }} />
-            <p style={{ color: 'var(--ink-muted)', marginBottom: 12 }}>🔒 Secure payment with Stripe 🔒</p>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16 }}>
-              <Image src="/visa.svg" alt="Visa" width={40} height={26} style={{ height: 26, width: 'auto' }} />
-              <Image src="/mastercard.svg" alt="Mastercard" width={40} height={26} style={{ height: 26, width: 'auto' }} />
-              <Image src="/american-express.svg" alt="Amex" width={40} height={26} style={{ height: 26, width: 'auto' }} />
-              <Image src="/discover.svg" alt="Discover" width={40} height={26} style={{ height: 26, width: 'auto' }} />
-              <Image src="/paypal.svg" alt="PayPal" width={40} height={26} style={{ height: 26, width: 'auto' }} />
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, marginTop: 16 }}>
+              <p style={{ color: 'var(--ink-muted)', marginBottom: 4, letterSpacing: '0.05em' }}>🔒 Secure Payment 🔒</p>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16 }}>
+                <Image src="/visa.svg" alt="Visa" width={40} height={26} style={{ height: 26, width: 'auto' }} />
+                <Image src="/mastercard.svg" alt="Mastercard" width={40} height={26} style={{ height: 26, width: 'auto' }} />
+                <Image src="/american-express.svg" alt="Amex" width={40} height={26} style={{ height: 26, width: 'auto' }} />
+                <Image src="/discover.svg" alt="Discover" width={40} height={26} style={{ height: 26, width: 'auto' }} />
+                <Image src="/paypal.svg" alt="PayPal" width={40} height={26} style={{ height: 26, width: 'auto' }} />
+              </div>
             </div>
-            <p className="ps-note">P.S. If the next page doesn&apos;t load... I&apos;m sorry, but the deal has ended!</p>
+            <div style={{ width: 56, height: 1, background: 'rgba(0,0,0,0.1)', margin: '16px auto 0' }} />
+            <p className="ps-note" style={{ fontStyle: 'italic' }}>P.S. If the next page doesn&apos;t load... I&apos;m sorry, but the deal has ended!</p>
           </div>
 
           <div className="bonsai-divider" />
 
           {/* MEGA BONUS */}
           <section style={{ padding: '80px 0 64px' }}>
-            <p className="bonsai-center" style={{ color: 'var(--ink-muted)', marginBottom: 8 }}>ONE MORE THING...</p>
+            <p className="bonsai-center" style={{ color: 'var(--ink-muted)', marginBottom: 8, fontSize: 20 }}>ONE MORE THING...</p>
             <h2 className="bonsai-center" style={{ marginBottom: 18 }}>Order now and you also get:</h2>
 
             <div className="bonus-card mega">
               <div className="bonus-header"><div className="bonus-label">Mega Bonus</div><div className="bonus-value">$67 value</div></div>
-              <h3>The Back Pocket Duo: Waves &amp; Rainbow</h3>
+              <h3><MegaBonusBadge text="The Back Pocket Duo: Waves & Rainbow" /></h3>
               <div className="bonus-desc">Paint a matching pair of back pockets that turns every pair of jeans into a statement piece.</div>
               <div className="bonus-body">
-                <div className="bonus-img"><Image src="/megabonus2.webp" alt="Wave and rainbow painted on back pockets" fill style={{ objectFit: 'cover' }} /></div>
+                <div className="bonus-img"><Image src="/megabonus_new.png" alt="Wave and rainbow painted on back pockets" fill style={{ objectFit: 'cover' }} /></div>
                 <ul>
                   <li>&#10022; <strong>Full walkthrough of both pocket designs:</strong> ocean wave on one side, rainbow and clouds on the other</li>
                   <li>&#10022; <strong>Painting realistic waves</strong> with layered blues, teals, and white foam that look like they&apos;re crashing</li>
@@ -526,31 +555,35 @@ export default function Home() {
             <h2 className="bonsai-center" style={{ marginBottom: 18 }}>Here&apos;s everything you get:</h2>
             <div className="stack-row stack-total"><span className="label">&#10003; 5 Core Modules</span><span className="val">$139</span></div>
 
-            <div className="stack-row"><span className="label">&#10003; Aftercare &amp; Mistake-Fixing Guide</span><span className="val">$37</span></div>
+            <div className="stack-row"><span className="label">&#10003; The Jeans Care &amp; Longevity Guide</span><span className="val">$37</span></div>
             <div className="stack-row"><span className="label">&#10003; The Painted Jeans Business Blueprint</span><span className="val">$47</span></div>
-            <div className="stack-row"><span className="label">&#10003; The Back Pocket Duo: Waves &amp; Rainbow</span><span className="val">$67</span></div>
-            <div className="stack-row" style={{ borderBottom: 'none' }}><span className="label" style={{ fontWeight: 700, color: 'var(--ink)' }}>Total Value</span><span className="val" style={{ fontSize: 16 }}>$290</span></div>
+            <div className="stack-row"><span className="label">&#10003; Color Palettes of the 10 Most Famous Artists</span><span className="val">$19</span></div>
+            <div className="stack-row"><span className="label">&#10003; <MegaBonusBadge text="The Back Pocket Duo: Waves & Rainbow" /></span><span className="val">$67</span></div>
+            <div className="stack-row" style={{ borderBottom: 'none' }}><span className="label" style={{ fontWeight: 700, color: 'var(--ink)' }}>Total Value</span><span className="val" style={{ fontSize: 16 }}>$309</span></div>
           </section>
 
           <div className="checkout-box" style={{ maxWidth: 520, margin: '0 auto', padding: '40px 44px', borderRadius: 14, border: '2px solid rgba(99,71,160,0.25)', background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)', textAlign: 'center' }}>
-            <div className="price-old">Normally $292</div>
+            <div className="price-old">Normally $309</div>
             <p className="now-only" style={{ fontSize: 44, color: 'var(--ink)', fontWeight: 700, marginBottom: 8 }}>Now Only <span style={{ color: 'var(--gold)' }}>$47</span></p>
             <div className="price-note">One-time payment. Lifetime access.</div>
             <div style={{ marginTop: 20 }}><CheckoutButton /></div>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginTop: 20 }}>
-              <Image src="/guarantee1.webp" alt="90-Day Money Back Guarantee" width={52} height={52} style={{ width: 48, height: 48, flexShrink: 0 }} />
-              <p style={{ margin: 0, fontWeight: 500 }}>90-Day Money Back Guarantee</p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 20, width: '100%' }}>
+              <div style={{ flex: 1, height: 1, background: 'rgba(0,0,0,0.1)' }} />
+              <p style={{ margin: 0, fontWeight: 500, color: 'rgba(26,46,26,0.7)', whiteSpace: 'nowrap' }}>90-Day Money-Back Guarantee</p>
+              <div style={{ flex: 1, height: 1, background: 'rgba(0,0,0,0.1)' }} />
             </div>
-            <div style={{ width: 48, height: 1, background: 'rgba(0,0,0,0.1)', margin: '20px auto' }} />
-            <p style={{ color: 'var(--ink-muted)', marginBottom: 12 }}>🔒 Secure payment with Stripe 🔒</p>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16 }}>
-              <Image src="/visa.svg" alt="Visa" width={40} height={26} style={{ height: 26, width: 'auto' }} />
-              <Image src="/mastercard.svg" alt="Mastercard" width={40} height={26} style={{ height: 26, width: 'auto' }} />
-              <Image src="/american-express.svg" alt="Amex" width={40} height={26} style={{ height: 26, width: 'auto' }} />
-              <Image src="/discover.svg" alt="Discover" width={40} height={26} style={{ height: 26, width: 'auto' }} />
-              <Image src="/paypal.svg" alt="PayPal" width={40} height={26} style={{ height: 26, width: 'auto' }} />
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, marginTop: 16 }}>
+              <p style={{ color: 'var(--ink-muted)', marginBottom: 4, letterSpacing: '0.05em' }}>🔒 Secure Payment 🔒</p>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16 }}>
+                <Image src="/visa.svg" alt="Visa" width={40} height={26} style={{ height: 26, width: 'auto' }} />
+                <Image src="/mastercard.svg" alt="Mastercard" width={40} height={26} style={{ height: 26, width: 'auto' }} />
+                <Image src="/american-express.svg" alt="Amex" width={40} height={26} style={{ height: 26, width: 'auto' }} />
+                <Image src="/discover.svg" alt="Discover" width={40} height={26} style={{ height: 26, width: 'auto' }} />
+                <Image src="/paypal.svg" alt="PayPal" width={40} height={26} style={{ height: 26, width: 'auto' }} />
+              </div>
             </div>
-            <p className="ps-note">P.S. If the next page doesn&apos;t load... I&apos;m sorry, but the deal has ended!</p>
+            <div style={{ width: 56, height: 1, background: 'rgba(0,0,0,0.1)', margin: '16px auto 0' }} />
+            <p className="ps-note" style={{ fontStyle: 'italic' }}>P.S. If the next page doesn&apos;t load... I&apos;m sorry, but the deal has ended!</p>
           </div>
 
 
@@ -558,11 +591,11 @@ export default function Home() {
       </div>
 
           {/* FOOTER */}
-          <footer className="bonsai-footer">
+          <footer className="bonsai-footer" style={{ paddingBottom: 100 }}>
             <div style={{ maxWidth: 1080, margin: '0 auto', padding: '0 40px' }}>
               <p>&copy; 2026 Painted Jeans. All rights reserved.</p>
               <p style={{ marginTop: 5 }}><a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a></p>
-              <p style={{ marginTop: 16, fontSize: 11, maxWidth: 600, margin: '16px auto 0', lineHeight: 1.5 }}>This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+              <p style={{ marginTop: 16, fontSize: 10, maxWidth: 600, margin: '16px auto 0', lineHeight: 1.5, color: 'rgba(125,117,104,0.35)' }}>This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
             </div>
           </footer>
     </main>
