@@ -235,7 +235,7 @@ export default function Home() {
           <section className="imagine-section" style={{ padding: '56px 0' }}>
             <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'left' }}>
               <h2 style={{ textAlign: 'left', marginBottom: 30 }}>Imagine if you could:</h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 16, fontSize: 20 }}>
                 <p><span style={{ color: '#c75a3a' }}>&rarr;</span> <strong style={{ color: '#c75a3a' }}>Make clothes that actually feel like you.</strong> Not mass-produced. Not someone else&apos;s design. Something you made with your own hands that makes people ask: &quot;Wait... where did you get those?&quot;</p>
                 <p><span style={{ color: '#2a8a7a' }}>&rarr;</span> <strong style={{ color: '#2a8a7a' }}>Stand out from the crowd</strong> without even trying. Walk into a room and have someone grab your arm mid-conversation. &quot;Wait. Did you paint those?&quot; And you just nod like it&apos;s no big deal.</p>
                 <p><span style={{ color: '#c78a2a' }}>&rarr;</span> Sit down after a long day, feel the brush gliding across the denim, and <strong style={{ color: '#c78a2a' }}>lose yourself in a quiet evening</strong> with nowhere to be.</p>
@@ -243,10 +243,10 @@ export default function Home() {
               </div>
 
 
-              <div style={{ marginTop: 96 }}>
+              <div style={{ marginTop: 96, fontSize: 20 }}>
                 <h2 style={{ textAlign: 'left', marginBottom: 56 }}>This will be your most complimented pair.</h2>
-                <p>You walk into a coffee shop and someone taps your shoulder. &quot;Wait, where are those from?&quot;</p>
-                <p>You post a photo and the comments won&apos;t stop.</p>
+                <p>You walk into a coffee shop and someone taps your shoulder. <strong>&quot;Wait, where are those from?&quot;</strong></p>
+                <p>You post a photo and the <strong>comments won&apos;t stop.</strong></p>
                 <p>Friends start texting you asking if you can make them a pair.</p>
                 <p>Not because you tried to stand out. <strong>Because you made something real.</strong></p>
                 <p>That forgotten pair collecting dust in the back of your closet? <strong>It&apos;s about to become the most complimented thing you own.</strong></p>
@@ -256,7 +256,7 @@ export default function Home() {
 
           {/* ISN'T THIS EXPENSIVE */}
           <section style={{ padding: '48px 0' }}>
-            <div style={{ maxWidth: 760, margin: '0 auto' }}>
+            <div style={{ maxWidth: 760, margin: '0 auto', fontSize: 20 }}>
             <h2 style={{ textAlign: 'left', marginBottom: 64 }}>&quot;Isn&apos;t this expensive to get into?&quot;</h2>
               <p><strong>Your first pair costs less than a coffee habit.</strong></p>
               <p>Fabric paint is $8-12. A brush set costs under $10. Fabric medium is $5.</p>
@@ -267,7 +267,7 @@ export default function Home() {
 
           {/* ANYONE CAN LEARN */}
           <section style={{ padding: '48px 0' }}>
-            <div style={{ maxWidth: 760, margin: '0 auto' }}>
+            <div style={{ maxWidth: 760, margin: '0 auto', fontSize: 20 }}>
             <h2 style={{ textAlign: 'left', marginBottom: 64 }}>Anyone can paint jeans.</h2>
               <p><span style={{ color: '#c75a3a', fontWeight: 600 }}>&rarr; Even if you can&apos;t draw a straight line.</span> You don&apos;t need to. The techniques in this course use stencils, transfers, and simple brushwork that look incredible without any drawing ability.</p>
               <p><span style={{ color: '#2a8a7a', fontWeight: 600 }}>&rarr; Even if you think you&apos;re &quot;not creative.&quot;</span> Creativity isn&apos;t talent. It&apos;s a set of techniques. Follow the steps, and your jeans will look like a professional painted them.</p>
