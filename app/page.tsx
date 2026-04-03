@@ -102,6 +102,7 @@ export default function Home() {
         .module-card li { padding: 6px 0; font-size: 18px; line-height: 1.6; }
         .module-img { width: 280px; min-width: 280px; height: 260px; border-radius: 8px; background: linear-gradient(135deg, var(--bg-warm), var(--sand)); display: flex; align-items: center; justify-content: center; font-size: 28px; border: 1px solid var(--sand); overflow: hidden; position: relative; }
 
+        .hereswhatyouget-mobile { display: none; }
         /* CTA */
         .cta-block { text-align: center; padding: 56px 0; }
         .price-old { font-size: 26px; color: var(--ink-muted); text-decoration: line-through; margin-bottom: 4px; }
@@ -193,6 +194,8 @@ export default function Home() {
           .bonsai-page { font-size: 18px; }
           .bonsai-page p:not(.hero-intro):not(.now-only), .bonsai-page li { font-size: 18px !important; }
           .module-img, .bonus-img { height: auto; aspect-ratio: 1/1; }
+          .hereswhatyouget-desktop { display: none !important; }
+          .hereswhatyouget-mobile { display: block !important; }
           .bonus-card h3, .module-card h3 { margin-bottom: 14px !important; }
           .bonus-desc, .module-sub { margin-bottom: 22px !important; }
           .badge { font-size: 10px; letter-spacing: 1.5px; padding: 5px 12px; }
@@ -224,7 +227,7 @@ export default function Home() {
             <p style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: 'var(--ink-muted)', marginTop: 8, maxWidth: 600, marginLeft: 'auto', marginRight: 'auto', fontStyle: 'italic' }}>Without needing years of practice or expensive supplies</p>
 
             <div style={{ marginTop: 36, display: 'flex', justifyContent: 'center' }}>
-              <Image id="hero" src="/herov5.png" alt="Custom painted jeans" width={1024} height={1024} style={{ width: '100%', maxWidth: 560, height: 'auto', borderRadius: 16, boxShadow: '0 12px 40px rgba(0,0,0,0.15)' }} />
+              <Image id="hero" src="/herov6.png" alt="Custom painted jeans" width={1024} height={1024} style={{ width: '100%', maxWidth: 560, height: 'auto', borderRadius: 16, boxShadow: '0 12px 40px rgba(0,0,0,0.15)' }} />
             </div>
           </section>
 
@@ -299,7 +302,8 @@ export default function Home() {
           <section className="bonsai-center" style={{ padding: '80px 0 36px' }}>
             <h2 style={{ marginBottom: 4, fontSize: 'clamp(2.2rem, 5vw, 3.2rem)', fontWeight: 600 }}>Introducing: The Painted Jeans Masterclass</h2>
             <div style={{ marginTop: 36, display: 'flex', justifyContent: 'center' }}>
-              <Image src="/hereswhatyouget.jpg" alt="Here's what you get" width={1200} height={800} style={{ width: '100%', maxWidth: 700, height: 'auto', borderRadius: 16, boxShadow: '0 12px 40px rgba(0,0,0,0.15)' }} />
+              <Image src="/hereswhatyouget.jpg" alt="Here's what you get" width={1200} height={800} className="hereswhatyouget-desktop" style={{ width: '100%', maxWidth: 700, height: 'auto', borderRadius: 16, boxShadow: '0 12px 40px rgba(0,0,0,0.15)' }} />
+              <Image src="/hereswhatyouget_mobile.png" alt="Here's what you get" width={600} height={400} className="hereswhatyouget-mobile" style={{ width: '100%', maxWidth: 700, height: 'auto', borderRadius: 16, boxShadow: '0 12px 40px rgba(0,0,0,0.15)' }} />
             </div>
           </section>
 
