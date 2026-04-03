@@ -14,6 +14,9 @@ export async function POST() {
         enabled: true,
         allow_redirects: 'never',
       },
+      metadata: {
+        product_id: 'prod_UGm9SqhYOkxXnC',
+      },
     });
 
     return NextResponse.json({ clientSecret: paymentIntent.client_secret });
