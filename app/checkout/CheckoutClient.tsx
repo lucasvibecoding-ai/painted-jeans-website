@@ -12,7 +12,7 @@ const stripePromise = loadStripe(
 export default function CheckoutClient() {
   const [clientSecret, setClientSecret] = useState('');
   const [email, setEmail] = useState('');
-  const [emailTouched, setEmailTouched] = useState(false);
+  const [showEmailError, setShowEmailError] = useState(false);
   const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   useEffect(() => {
@@ -231,19 +231,6 @@ export default function CheckoutClient() {
           margin-top: 6px;
         }
 
-        .payment-blocked-overlay {
-          position: relative;
-        }
-
-        .payment-blocked-overlay::after {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: rgba(250,250,250,0.6);
-          z-index: 10;
-          cursor: not-allowed;
-        }
-
         .checkout-form-panel .email-input::placeholder {
           color: #9a9689;
         }
@@ -441,20 +428,22 @@ export default function CheckoutClient() {
             <label className="email-label">Email</label>
             <input
               type="email"
-              className={`email-input${emailTouched && !isEmailValid ? ' email-error' : ''}`}
+              className={`email-input${showEmailError && !isEmailValid ? ' email-error' : ''}`}
               placeholder="you@example.com"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              onBlur={() => setEmailTouched(true)}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                if (showEmailError) setShowEmailError(false);
+              }}
             />
-            {emailTouched && !isEmailValid && (
-              <div className="email-error-msg">Please enter a valid email address</div>
+            {showEmailError && !isEmailValid && (
+              <div className="email-error-msg">Please enter a valid email to continue</div>
             )}
             <div className="form-divider" />
 
             <div className="section-title">Express checkout</div>
 
-            <div className={`payment-form-area${!isEmailValid ? ' payment-blocked-overlay' : ''}`}>
+            <div className="payment-form-area">
               {clientSecret ? (
                 <Elements
                   stripe={stripePromise}
@@ -470,7 +459,7 @@ export default function CheckoutClient() {
                     },
                   }}
                 >
-                  <StripeForm email={email} onEmailChange={setEmail} isEmailValid={isEmailValid} paypalSlot={<PayPalForm />} />
+                  <StripeForm email={email} onEmailChange={setEmail} isEmailValid={isEmailValid} onEmailRequired={() => setShowEmailError(true)} paypalSlot={<PayPalForm isEmailValid={isEmailValid} onEmailRequired={() => setShowEmailError(true)} />} />
                 </Elements>
               ) : (
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '180px' }}>

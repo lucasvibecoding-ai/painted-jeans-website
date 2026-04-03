@@ -8,7 +8,7 @@ import {
   useElements,
 } from '@stripe/react-stripe-js';
 
-export default function StripeForm({ email, onEmailChange, isEmailValid, paypalSlot }: { email: string; onEmailChange: (v: string) => void; isEmailValid: boolean; paypalSlot?: React.ReactNode }) {
+export default function StripeForm({ email, onEmailChange, isEmailValid, onEmailRequired, paypalSlot }: { email: string; onEmailChange: (v: string) => void; isEmailValid: boolean; onEmailRequired: () => void; paypalSlot?: React.ReactNode }) {
   const stripe = useStripe();
   const elements = useElements();
   const [isProcessing, setIsProcessing] = useState(false);
@@ -16,7 +16,8 @@ export default function StripeForm({ email, onEmailChange, isEmailValid, paypalS
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!stripe || !elements || !isEmailValid) return;
+    if (!isEmailValid) { onEmailRequired(); return; }
+    if (!stripe || !elements) return;
 
     setIsProcessing(true);
     setError('');
@@ -36,7 +37,8 @@ export default function StripeForm({ email, onEmailChange, isEmailValid, paypalS
   };
 
   const onExpressCheckoutConfirm = async () => {
-    if (!stripe || !elements || !isEmailValid) return;
+    if (!isEmailValid) { onEmailRequired(); return; }
+    if (!stripe || !elements) return;
     setIsProcessing(true);
     setError('');
 
@@ -90,19 +92,19 @@ export default function StripeForm({ email, onEmailChange, isEmailValid, paypalS
         )}
         <button
           type="submit"
-          disabled={!stripe || isProcessing || !isEmailValid}
+          disabled={!stripe || isProcessing}
           style={{
             width: '100%',
             marginTop: '24px',
             padding: '12px 24px',
-            background: (isProcessing || !isEmailValid) ? '#a3acb9' : '#635BFF',
+            background: isProcessing ? '#a3acb9' : '#635BFF',
             border: 'none',
             borderRadius: '6px',
             color: '#ffffff',
             fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
             fontSize: '16px',
             fontWeight: 600,
-            cursor: (isProcessing || !isEmailValid) ? 'not-allowed' : 'pointer',
+            cursor: isProcessing ? 'not-allowed' : 'pointer',
             transition: 'all 0.15s ease',
             letterSpacing: '0.01em',
           }}
